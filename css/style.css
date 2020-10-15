@@ -77,6 +77,14 @@ body
     height: auto;
 }
 
+.icon
+{
+    position: relative;
+    top: 2px;
+    width: 1%;
+    height: auto;
+}
+
 .thumbnail
 {
     border-top-left-radius: 30px;
@@ -100,6 +108,13 @@ body
     font-size: small;
     grid-row: 4/5;
     grid-column: 1/4;
+}
+
+.array li
+{
+    float: left;
+    margin: 0;
+    padding: 0;
 }
 
 .horizontal li
