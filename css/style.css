@@ -61,6 +61,19 @@ body
     padding: 50px 50px 50px 50px;
 }
 
+.post-container
+{
+    width: 100%;
+    grid-column: 2/3;
+}
+
+.post
+{
+    margin-top: 10%;
+    width: 100%;
+    border-radius: 30px;
+}
+
 .left
 {
     grid-column: 1/2;
