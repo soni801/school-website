@@ -90,6 +90,11 @@ body
     height: auto;
 }
 
+.resize-iframe
+{
+    height: 486px;
+}
+
 .icon
 {
     position: relative;
