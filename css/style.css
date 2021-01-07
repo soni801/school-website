@@ -181,3 +181,21 @@ a
     color: white;
     text-decoration: none;
 }
+
+/* Alternative link style */
+.link
+{
+    text-decoration: underline;
+}
+
+/* Alternative link hover style */
+.link:hover
+{
+    color: lightgray;
+}
+
+/* Alternative link click style */
+.link:active
+{
+    color: gray;
+}
