@@ -1,9 +1,11 @@
+/* Custom font */
 @font-face
 {
     font-family: Montserrat;
     src: url(../assets/fonts/Montserrat.ttf);
 }
 
+/* Primary style */
 body
 {
     font-family: Montserrat, sans-serif;
@@ -11,28 +13,33 @@ body
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto auto auto auto;
+    color: white;
+    background-color: #222;
 }
 
+/* Background video style */
 .background-video
 {
     position: fixed;
     z-index: 0;
+    width: 100%;
 }
 
+/* Layer fix */
 *
 {
     z-index: 1;
 }
 
+/* Navigation bar */
 .navigation-bar
 {
-    background-color: white;
-    /*background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);*/
+    background-color: #222;
     grid-row: 1/2;
     grid-column: 1/4;
 }
 
+/* Div containing cards */
 .card-container
 {
     grid-column: 2/3;
@@ -43,17 +50,19 @@ body
     padding: 10%;
 }
 
+/* Card style */
 .card
 {
-    background-color: white;
+    background-color: #222;
     text-align: center;
     border-radius: 30px;
     max-width: 300px;
 }
 
+/* Main page style */
 .main
 {
-    background-color: white;
+    background-color: #222;
     grid-row: 3/4;
     grid-column: 1/4;
     display: grid;
@@ -61,12 +70,14 @@ body
     padding: 50px 50px 50px 50px;
 }
 
+/* Div containing posts */
 .post-container
 {
     width: 100%;
     grid-column: 2/3;
 }
 
+/* Post style */
 .post
 {
     margin-top: 10%;
@@ -74,27 +85,32 @@ body
     border-radius: 30px;
 }
 
+/* Left column align */
 .left
 {
     grid-column: 1/2;
 }
 
+/* Right column align */
 .right
 {
     grid-column: 3/4;
 }
 
+/* Resize to fit */
 .resize
 {
     width: 100%;
     height: auto;
 }
 
+/* Resize iframe to fit */
 .resize-iframe
 {
     height: 486px;
 }
 
+/* Icon style */
 .icon
 {
     position: relative;
@@ -103,31 +119,38 @@ body
     height: auto;
 }
 
+/* Preview images style */
 .thumbnail
 {
+    position: relative;
+    top: -5px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
 
+/* Drop shadow */
 .shadow
 {
-    box-shadow: #222222 0 0 50px;
+    box-shadow: black 0 0 50px;
 }
 
+/* Padding */
 .padding
 {
     padding: 15px 30px 15px 30px;
 }
 
+/* Footer style */
 .footer
 {
-    background-color: white;
+    background-color: #222;
     text-align: center;
     font-size: small;
     grid-row: 4/5;
     grid-column: 1/4;
 }
 
+/* List style */
 .array li
 {
     float: left;
@@ -135,18 +158,21 @@ body
     padding: 0;
 }
 
+/* Horizontal list style */
 .horizontal li
 {
     display: inline;
 }
 
+/* Gray color */
 .gray
 {
-    color: lightgray;
+    color: #555;
 }
 
+/* Link style */
 a
 {
-    color: black;
+    color: white;
     text-decoration: none;
 }
