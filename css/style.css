@@ -22,7 +22,9 @@ body
 {
     position: fixed;
     z-index: 0;
-    width: 100%;
+    min-width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 /* Layer fix */
@@ -153,9 +155,12 @@ body
 /* List style */
 .array li
 {
+    position: relative;
     float: left;
     margin: 0;
     padding: 0;
+    top: -7px;
+    left: -19px;
 }
 
 /* Horizontal list style */
