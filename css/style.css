@@ -42,12 +42,12 @@ body
 /* Div containing cards */
 .card-container
 {
-    grid-column: 2/3;
+    grid-column: 1/4;
     grid-row: 2/3;
     display: grid;
     grid-template-columns: auto auto;
-    justify-content: space-evenly;
-    padding: 10%;
+    justify-content: center;
+    padding: 50px 10% 50px 10%;
 }
 
 /* Card style */
@@ -56,7 +56,8 @@ body
     background-color: #222;
     text-align: center;
     border-radius: 30px;
-    max-width: 300px;
+    width: 300px;
+    margin: 50px;
 }
 
 /* Main page style */
@@ -115,8 +116,7 @@ body
 {
     position: relative;
     top: 2px;
-    width: 1%;
-    height: auto;
+    height: 1em;
 }
 
 /* Preview images style */
