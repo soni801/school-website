@@ -20,12 +20,35 @@
         <meta name="theme-color" content="#3ba3a1">
     </head>
     <body>
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="assets/background.mp4" type="video/mp4">
+            There was an error playing the video
+        </video>
+        <div class="background"></div>
         <div class="navigation-bar padding shadow">
             <ul class="horizontal array">
                 <li><a href="index.html"><h1>Samuels hjørne</h1></a></li>
                 <li class="gray"><h1>&nbsp;&nbsp;|&nbsp;&nbsp;</h1></li>
                 <li><h1>Skolearbeid</h1></li>
             </ul>
+        </div>
+        <h1 class="mobile-subtitle">Skolearbeid</h1>
+        <img class="mobile-menu-button" onclick="openMenu()" id="menu-button" src="assets/icons/menu.png" alt="Menu Button">
+        <div class="mobile-menu-overlay" id="overlay"></div>
+        <div class="mobile-menu" id="menu">
+            <a href="index.html" onclick="closeMenu()"><img class="mobile-home-button" src="assets/icons/home.png" alt="Home Button"></a>
+            <img class="mobile-close-button" onclick="closeMenu()" id="close-button" src="assets/icons/close.png" alt="Close Button">
+            <div class="menu-links" id="links">
+                <a href="skolearbeid.html"><h1>Skolearbeid</h1></a>
+                <a href="fritidsaktiviteter.html"><h1>Fritidsaktiviteter</h1></a>
+                <div class="mobile-links">
+                    <a href="faq.html"><h3>FAQ</h3></a>
+                    <a href="https://github.com/skoleopplegg/skoleopplegg.github.io" target="_blank"><h3>GitHub</h3></a>
+                    <a href="https://twitter.com/soni801_" target="_blank"><h3>Twitter</h3></a>
+                    <a href="https://www.youtube.com/soni801" target="_blank"><h3>YouTube</h3></a>
+                    <a href="https://www.twitch.tv/soni801" target="_blank"><h3>Twitch</h3></a>
+                </div>
+            </div>
         </div>
         <div class="post-container">
             <div class="post shadow">
@@ -98,5 +121,7 @@
             </ul>
             <p class="align-right">Copyright Samuel Aasen © 2020-2021</p>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="skolearbeid.js"></script>
     </body>
 </html>

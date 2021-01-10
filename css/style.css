@@ -47,6 +47,32 @@ a
     padding: 40% 0 40% 0;
 }
 
+.post
+{
+    background-color: #222;
+    padding: 15px;
+}
+
+.post::after
+{
+    position: absolute;
+    content: "";
+    background-color: #555;
+    width: 200px;
+    margin-top: 2px;
+    height: 5px;
+    border-radius: 5px;
+}
+
+/* Mobile title style */
+.mobile-subtitle
+{
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 20% 0 20% 0;
+}
+
 .mobile-menu-button
 {
     position: absolute;
@@ -66,6 +92,7 @@ a
     background-color: #111;
     width: 0;
     transition: .5s;
+    z-index: 2;
 }
 
 .mobile-close-button
@@ -90,7 +117,7 @@ a
 
 .mobile-menu-overlay
 {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -143,18 +170,6 @@ a
     height: auto;
 }
 
-/* Drop shadow */
-.shadow
-{
-    box-shadow: black 0 0 50px;
-}
-
-/* Padding */
-.padding
-{
-    padding: 15px 30px 15px 30px;
-}
-
 /* Footer style */
 .footer
 {
@@ -181,6 +196,12 @@ a
     text-align: center;
 }
 
+/* Gray color */
+.gray
+{
+    color: #555;
+}
+
 /* Desktop style */
 
 @media only screen and (min-width: 800px)
@@ -197,6 +218,17 @@ a
     .background-video
     {
         min-width: 100%;
+    }
+
+    .background
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #222;
+        z-index: -1;
     }
 
     /* Navigation bar */
@@ -252,6 +284,12 @@ a
         margin: 5% 0 5% 0;
         width: 100%;
         border-radius: 30px;
+        padding: 0;
+    }
+
+    .post::after
+    {
+        display: none;
     }
 
     /* Left column align */
@@ -361,12 +399,6 @@ a
         display: inline;
     }
 
-    /* Gray color */
-    .gray
-    {
-        color: #555;
-    }
-
     /* Alternative link style */
     .link
     {
@@ -387,6 +419,11 @@ a
 
     /* Hide mobile title */
     .mobile-title
+    {
+        display: none;
+    }
+
+    .mobile-subtitle
     {
         display: none;
     }
