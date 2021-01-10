@@ -81,6 +81,13 @@ a
     transition: .5s;
 }
 
+.mobile-home-button
+{
+    margin: 15px;
+    width: 40px;
+    height: auto;
+}
+
 .mobile-menu-overlay
 {
     position: absolute;
@@ -96,7 +103,7 @@ a
 
 .menu-links
 {
-    padding: 65px 15px 65px 15px;
+    padding-right: 15px;
     text-align: right;
     visibility: hidden;
     opacity: 0;
