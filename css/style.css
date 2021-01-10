@@ -16,6 +16,13 @@ body
     background-color: #222;
 }
 
+/* Link style */
+a
+{
+    color: white;
+    text-decoration: none;
+}
+
 /* Background video style */
 .background-video
 {
@@ -38,8 +45,6 @@ body
     text-align: center;
     width: 100%;
     padding: 40% 0 40% 0;
-    background-color: rgba(0, 0, 0, .2);
-    backdrop-filter: blur(3px);
 }
 
 .mobile-menu-button
@@ -48,7 +53,7 @@ body
     top: 0;
     right: 0;
     margin: 15px;
-    width: 50px;
+    width: 40px;
     height: auto;
 }
 
@@ -69,11 +74,41 @@ body
     top: 0;
     right: 0;
     margin: 15px;
-    width: 50px;
+    width: 40px;
     height: auto;
     visibility: hidden;
     opacity: 0;
     transition: .5s;
+}
+
+.mobile-menu-overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.menu-links
+{
+    padding: 65px 15px 65px 15px;
+    text-align: right;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+.mobile-links
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 15px;
 }
 
 .left
@@ -323,13 +358,6 @@ body
     .gray
     {
         color: #555;
-    }
-
-    /* Link style */
-    a
-    {
-        color: white;
-        text-decoration: none;
     }
 
     /* Alternative link style */
