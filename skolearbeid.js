@@ -1,3 +1,4 @@
+// Open mobile navigation menu
 function openMenu()
 {
     document.getElementById("menu").style.width = "80%";
@@ -12,6 +13,7 @@ function openMenu()
     document.getElementById("links").style.opacity = "1";
 }
 
+// Close mobile navigation menu
 function closeMenu()
 {
     document.getElementById("menu").style.width = "0";
@@ -26,6 +28,7 @@ function closeMenu()
     document.getElementById("links").style.opacity = "0";
 }
 
+// Resize iframes when loading
 window.onload = function ()
 {
     const iframes = document.getElementsByTagName("iframe");
@@ -37,6 +40,7 @@ window.onload = function ()
     }
 };
 
+// Resize iframes on window resize
 $(window).on('resize',function ()
 {
     const iframes = document.getElementsByTagName("iframe");

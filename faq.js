@@ -1,3 +1,4 @@
+// Open mobile navigation menu
 function openMenu()
 {
     document.getElementById("menu").style.width = "80%";
@@ -12,6 +13,7 @@ function openMenu()
     document.getElementById("links").style.opacity = "1";
 }
 
+// Close mobile navigation menu
 function closeMenu()
 {
     document.getElementById("menu").style.width = "0";

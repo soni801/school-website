@@ -1,13 +1,11 @@
-/* Custom font */
+/* Montserrat font */
 @font-face
 {
     font-family: Montserrat;
     src: url(../assets/fonts/Montserrat.ttf);
 }
 
-/* Mobile style */
-
-/* Primary style */
+/* Style applying to entire webpage */
 body
 {
     font-family: Montserrat, sans-serif;
@@ -16,7 +14,7 @@ body
     background-color: #222;
 }
 
-/* Link style */
+/* Primary link style */
 a
 {
     color: white;
@@ -32,7 +30,7 @@ a
     z-index: -1;
 }
 
-/* Navigation bar */
+/* Hide computer navigation bar */
 .navigation-bar
 {
     display: none;
@@ -47,12 +45,14 @@ a
     padding: 40% 0 40% 0;
 }
 
+/* Post style */
 .post
 {
     background-color: #222;
     padding: 15px;
 }
 
+/* Mobile post divider style */
 .post::after
 {
     position: absolute;
@@ -73,6 +73,7 @@ a
     padding: 20% 0 20% 0;
 }
 
+/* Mobile menu button style */
 .mobile-menu-button
 {
     position: absolute;
@@ -83,6 +84,7 @@ a
     height: auto;
 }
 
+/* Mobile navigation menu style */
 .mobile-menu
 {
     position: fixed;
@@ -95,6 +97,7 @@ a
     z-index: 2;
 }
 
+/* Mobile navigation menu close button style */
 .mobile-close-button
 {
     position: absolute;
@@ -108,6 +111,7 @@ a
     transition: .5s;
 }
 
+/* Mobile navigation menu home button style */
 .mobile-home-button
 {
     margin: 15px;
@@ -115,6 +119,7 @@ a
     height: auto;
 }
 
+/* Mobile navigation menu background fade style */
 .mobile-menu-overlay
 {
     position: fixed;
@@ -128,6 +133,7 @@ a
     transition: .5s;
 }
 
+/* Mobile navigation menu links style */
 .menu-links
 {
     padding-right: 15px;
@@ -137,6 +143,7 @@ a
     transition: .5s;
 }
 
+/* Mobile links style */
 .mobile-links
 {
     position: absolute;
@@ -145,12 +152,13 @@ a
     padding-right: 15px;
 }
 
+/* First main paragraph style */
 .left
 {
     margin-bottom: 20px;
 }
 
-/* Div containing cards */
+/* Hide computer navigation card container */
 .card-container
 {
     display: none;
@@ -178,13 +186,13 @@ a
     font-size: small;
 }
 
-/* Left footer text style */
+/* Hide computer left footer text */
 .align-left
 {
     display: none;
 }
 
-/* Center footer text style */
+/* Hide computer center footer text */
 .align-center
 {
     display: none;
@@ -202,11 +210,15 @@ a
     color: #555;
 }
 
-/* Desktop style */
+/*                      (default 0px-799px)                      */
+/*      ↑ Everything above this line applies to mobile ↑         */
+/* ------------------------------------------------------------- */
+/*     ↓ Everything below this line applies to computer ↓        */
+/*                     (overridden 800px-∞px)                    */
 
 @media only screen and (min-width: 800px)
 {
-    /* Primary style */
+    /* Style applies to entire page */
     body
     {
         display: grid;
@@ -220,6 +232,7 @@ a
         min-width: 100%;
     }
 
+    /* Static color background style */
     .background
     {
         position: fixed;
@@ -231,7 +244,7 @@ a
         z-index: -1;
     }
 
-    /* Navigation bar */
+    /* Navigation bar style */
     .navigation-bar
     {
         display: initial;
@@ -240,7 +253,7 @@ a
         grid-column: 1/4;
     }
 
-    /* Div containing cards */
+    /* Navigation card container style */
     .card-container
     {
         grid-column: 1/4;
@@ -251,7 +264,7 @@ a
         padding: 50px 10% 50px 10%;
     }
 
-    /* Card style */
+    /* Navigation card style */
     .card
     {
         background-color: #222;
@@ -271,7 +284,7 @@ a
         padding: 50px 50px 50px 50px;
     }
 
-    /* Div containing posts */
+    /* Post container style */
     .post-container
     {
         width: 100%;
@@ -287,34 +300,22 @@ a
         padding: 0;
     }
 
+    /* Hide mobile post divider */
     .post::after
     {
         display: none;
     }
 
-    /* Left column align */
+    /* Main page left column style */
     .left
     {
         grid-column: 1/2;
     }
 
-    /* Right column align */
+    /* Main page right column style */
     .right
     {
         grid-column: 3/4;
-    }
-
-    /* Resize to fit */
-    .resize
-    {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Resize iframe to fit */
-    .resize-iframe
-    {
-        height: 486px;
     }
 
     /* Icon style */
@@ -349,8 +350,6 @@ a
     /* Footer style */
     .footer
     {
-        background-color: #222;
-        font-size: small;
         grid-row: 4/5;
         grid-column: 1/4;
         display: grid;
@@ -423,11 +422,13 @@ a
         display: none;
     }
 
+    /* Hide mobile subtitle */
     .mobile-subtitle
     {
         display: none;
     }
 
+    /* Hide mobile navigation menu button */
     .mobile-menu-button
     {
         display: none;
