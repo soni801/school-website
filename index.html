@@ -27,7 +27,7 @@
         <meta name="theme-color" content="#3ba3a1">
     </head>
     <body>
-        <video autoplay loop muted playsinline class="background-video">
+        <video autoplay loop muted playsinline class="background-video" id="background-video">
             <source src="assets/background.mp4" type="video/mp4">
             There was an error playing the video
         </video>
@@ -35,6 +35,7 @@
             <ul class="horizontal array">
                 <li><a href="#"><h1>Samuels hjørne</h1></a></li>
             </ul>
+            <img id="theme-chooser" src="assets/icons/sun.png" alt="Theme Chooser" onclick="changeTheme()">
         </div>
 
         <!-- Mobile navigation menu -->
@@ -109,6 +110,7 @@
         </div>
 
         <!-- Scripts -->
+        <script src="common-functions.js"></script>
         <script src="index.js"></script>
     </body>
 </html>
