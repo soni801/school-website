@@ -210,6 +210,17 @@ a
     color: #555;
 }
 
+.huge
+{
+    font-size: 300px;
+    margin: 50px 0 -50px 0;
+}
+
+.space-after
+{
+    padding-bottom: 250px; /* Only works for 1000 height */
+}
+
 /*                      (default 0px-799px)                      */
 /*      ↑ Everything above this line applies to mobile ↑         */
 /* ------------------------------------------------------------- */
