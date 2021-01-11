@@ -1,5 +1,5 @@
 // Set theme
-let theme = sessionStorage.getItem("theme") === "dark" || sessionStorage.getItem("theme") === "light" ? sessionStorage.getItem("theme") : "dark";
+let theme = localStorage.getItem("theme") === "dark" || localStorage.getItem("theme") === "light" ? localStorage.getItem("theme") : "dark";
 loadTheme();
 
 // Open mobile navigation menu
@@ -41,7 +41,7 @@ function changeTheme()
         case "light": theme = "dark"; break;
     }
 
-    sessionStorage.setItem("theme", theme);
+    localStorage.setItem("theme", theme);
     loadTheme();
 }
 
