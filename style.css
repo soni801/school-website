@@ -21,6 +21,12 @@ a
     text-decoration: none;
 }
 
+/* Remove iframe border */
+iframe
+{
+    border: 0;
+}
+
 /* Background video style */
 .background-video
 {

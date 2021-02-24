@@ -48,6 +48,8 @@ function changeTheme()
 // Load website theme
 function loadTheme()
 {
+    // TODO: Improve theme changing
+
     const button = document.getElementById("theme-chooser");
     let all;
 
