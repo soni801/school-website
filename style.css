@@ -1,462 +1,502 @@
-/* Montserrat font */
-@font-face
-{
-    font-family: Montserrat;
-    src: url(assets/fonts/Montserrat.ttf);
-}
+/* Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*!* Montserrat font *!*/
+/*@font-face*/
+/*{*/
+/*    font-family: Montserrat;*/
+/*    src: url(assets/fonts/Montserrat.ttf);*/
+/*}*/
 
 /* Style applying to entire webpage */
 body
 {
-    font-family: Montserrat, sans-serif;
+    font-family: Poppins, sans-serif;
     margin: 0;
-    color: white;
-    background-color: #222;
+    color: #222;
+    background-color: #f9f5ff;
 }
 
-/* Primary link style */
-a
+#header
 {
-    color: white;
-    text-decoration: none;
-}
-
-/* Remove iframe border */
-iframe
-{
-    border: 0;
-}
-
-/* Background video style */
-.background-video
-{
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: -1;
-}
-
-/* Hide computer navigation bar */
-.navigation-bar
-{
-    display: none;
-}
-
-/* Mobile title style */
-.mobile-title
-{
-    margin: 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
     width: 100%;
-    padding: 40% 0 40% 0;
+    box-shadow: 0 0 7px #222;
 }
 
-/* Post style */
-.post
+#header h1
 {
-    background-color: #222;
-    padding: 15px;
+    margin-left: 30px;
 }
 
-/* Mobile post divider style */
-.post::after
+#header h2
 {
-    position: absolute;
-    content: "";
-    background-color: #555;
-    width: 200px;
-    margin-top: 2px;
-    height: 5px;
-    border-radius: 5px;
+    margin-left: 80px;
+    position: relative;
 }
 
-/* Mobile title style */
-.mobile-subtitle
-{
-    margin: 0;
-    text-align: center;
-    width: 100%;
-    padding: 20% 0 20% 0;
-}
-
-/* Mobile menu button style */
-.mobile-menu-button
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 15px;
-    width: 40px;
-    height: auto;
-}
-
-/* Mobile navigation menu style */
-.mobile-menu
-{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background-color: #111;
-    width: 0;
-    transition: .5s;
-    z-index: 2;
-}
-
-/* Mobile navigation menu close button style */
-.mobile-close-button
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 15px;
-    width: 40px;
-    height: auto;
-    visibility: hidden;
-    opacity: 0;
-    transition: .5s;
-}
-
-/* Mobile navigation menu home button style */
-.mobile-home-button
-{
-    margin: 15px;
-    width: 40px;
-    height: auto;
-}
-
-/* Mobile navigation menu background fade style */
-.mobile-menu-overlay
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0;
-    visibility: hidden;
-    transition: .5s;
-}
-
-/* Mobile navigation menu links style */
-.menu-links
-{
-    padding-right: 15px;
-    text-align: right;
-    visibility: hidden;
-    opacity: 0;
-    transition: .5s;
-}
-
-/* Mobile links style */
-.mobile-links
+#header h2::after
 {
     position: absolute;
     bottom: 0;
-    right: 0;
-    padding-right: 15px;
+    left: 0;
+    content: "";
+    height: 5px;
+    width: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: ease 250ms;
 }
 
-/* First main paragraph style */
-.left
+#header h2:hover::after
 {
-    margin-bottom: 20px;
-}
-
-/* Hide computer navigation card container */
-.card-container
-{
-    display: none;
-}
-
-/* Main page style */
-.main
-{
-    background-color: #222;
-    padding: 15px 30px 15px 30px;
-}
-
-/* Resize to fit */
-.resize
-{
+    background: #13505b;
     width: 100%;
-    height: auto;
 }
 
-/* Footer style */
-.footer
-{
-    padding: 5px 0 5px 0;
-    background-color: #222;
-    font-size: small;
-}
+/*!* Primary link style *!*/
+/*a*/
+/*{*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*}*/
 
-/* Hide computer left footer text */
-.align-left
-{
-    display: none;
-}
+/*!* Remove iframe border *!*/
+/*iframe*/
+/*{*/
+/*    border: 0;*/
+/*}*/
 
-/* Hide computer center footer text */
-.align-center
-{
-    display: none;
-}
+/*!* Background video style *!*/
+/*.background-video*/
+/*{*/
+/*    position: fixed;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, 0);*/
+/*    z-index: -1;*/
+/*}*/
 
-/* Right footer text style */
-.align-right
-{
-    text-align: center;
-}
+/*!* Hide computer navigation bar *!*/
+/*.navigation-bar*/
+/*{*/
+/*    display: none;*/
+/*}*/
 
-/* Gray color */
-.gray
-{
-    color: #555;
-}
+/*!* Mobile title style *!*/
+/*.mobile-title*/
+/*{*/
+/*    margin: 0;*/
+/*    text-align: center;*/
+/*    width: 100%;*/
+/*    padding: 40% 0 40% 0;*/
+/*}*/
 
-.huge
-{
-    font-size: 300px;
-    margin: 50px 0 -50px 0;
-}
+/*!* Post style *!*/
+/*.post*/
+/*{*/
+/*    background-color: #222;*/
+/*    padding: 15px;*/
+/*}*/
 
-.space-after
-{
-    padding-bottom: 250px; /* Only works for 1000 height */
-}
+/*!* Mobile post divider style *!*/
+/*.post::after*/
+/*{*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    background-color: #555;*/
+/*    width: 200px;*/
+/*    margin-top: 2px;*/
+/*    height: 5px;*/
+/*    border-radius: 5px;*/
+/*}*/
 
-#theme-chooser
-{
-    position: absolute;
-    margin-right: 50px;
-    width: 40px;
-    height: auto;
-    right: 0;
-}
+/*!* Mobile title style *!*/
+/*.mobile-subtitle*/
+/*{*/
+/*    margin: 0;*/
+/*    text-align: center;*/
+/*    width: 100%;*/
+/*    padding: 20% 0 20% 0;*/
+/*}*/
 
-/*                      (default 0px-799px)                      */
-/*      ↑ Everything above this line applies to mobile ↑         */
-/* ------------------------------------------------------------- */
-/*     ↓ Everything below this line applies to computer ↓        */
-/*                     (overridden 800px-∞px)                    */
+/*!* Mobile menu button style *!*/
+/*.mobile-menu-button*/
+/*{*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    margin: 15px;*/
+/*    width: 40px;*/
+/*    height: auto;*/
+/*}*/
 
-@media only screen and (min-width: 800px)
-{
-    /* Style applies to entire page */
-    body
-    {
-        display: grid;
-        grid-template-columns: 20% 60% 20%;
-        grid-template-rows: auto auto auto auto;
-    }
+/*!* Mobile navigation menu style *!*/
+/*.mobile-menu*/
+/*{*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    height: 100%;*/
+/*    background-color: #111;*/
+/*    width: 0;*/
+/*    transition: .5s;*/
+/*    z-index: 2;*/
+/*}*/
 
-    /* Background video style */
-    .background-video
-    {
-        min-width: 100%;
-    }
+/*!* Mobile navigation menu close button style *!*/
+/*.mobile-close-button*/
+/*{*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    margin: 15px;*/
+/*    width: 40px;*/
+/*    height: auto;*/
+/*    visibility: hidden;*/
+/*    opacity: 0;*/
+/*    transition: .5s;*/
+/*}*/
 
-    /* Static color background style */
-    .background
-    {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #222;
-        z-index: -1;
-    }
+/*!* Mobile navigation menu home button style *!*/
+/*.mobile-home-button*/
+/*{*/
+/*    margin: 15px;*/
+/*    width: 40px;*/
+/*    height: auto;*/
+/*}*/
 
-    /* Navigation bar style */
-    .navigation-bar
-    {
-        display: flex;
-        align-items: center;
-        background-color: #222;
-        grid-row: 1/2;
-        grid-column: 1/4;
-    }
+/*!* Mobile navigation menu background fade style *!*/
+/*.mobile-menu-overlay*/
+/*{*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: black;*/
+/*    opacity: 0;*/
+/*    visibility: hidden;*/
+/*    transition: .5s;*/
+/*}*/
 
-    /* Navigation card container style */
-    .card-container
-    {
-        grid-column: 1/4;
-        grid-row: 2/3;
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
-        padding: 50px 10% 50px 10%;
-    }
+/*!* Mobile navigation menu links style *!*/
+/*.menu-links*/
+/*{*/
+/*    padding-right: 15px;*/
+/*    text-align: right;*/
+/*    visibility: hidden;*/
+/*    opacity: 0;*/
+/*    transition: .5s;*/
+/*}*/
 
-    /* Navigation card style */
-    .card
-    {
-        background-color: #222;
-        text-align: center;
-        border-radius: 30px;
-        width: 300px;
-        margin: 50px;
-    }
+/*!* Mobile links style *!*/
+/*.mobile-links*/
+/*{*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    padding-right: 15px;*/
+/*}*/
 
-    /* Main page style */
-    .main
-    {
-        grid-row: 3/4;
-        grid-column: 1/4;
-        display: grid;
-        grid-template-columns: 45% 10% 45%;
-        padding: 50px 50px 50px 50px;
-    }
+/*!* First main paragraph style *!*/
+/*.left*/
+/*{*/
+/*    margin-bottom: 20px;*/
+/*}*/
 
-    /* Post container style */
-    .post-container
-    {
-        width: 100%;
-        grid-column: 2/3;
-    }
+/*!* Hide computer navigation card container *!*/
+/*.card-container*/
+/*{*/
+/*    display: none;*/
+/*}*/
 
-    /* Post style */
-    .post
-    {
-        margin: 5% 0 5% 0;
-        width: 100%;
-        border-radius: 30px;
-        padding: 0;
-    }
+/*!* Main page style *!*/
+/*.main*/
+/*{*/
+/*    background-color: #222;*/
+/*    padding: 15px 30px 15px 30px;*/
+/*}*/
 
-    /* Hide mobile post divider */
-    .post::after
-    {
-        display: none;
-    }
+/*!* Resize to fit *!*/
+/*.resize*/
+/*{*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*}*/
 
-    /* Main page left column style */
-    .left
-    {
-        grid-column: 1/2;
-    }
+/*!* Footer style *!*/
+/*.footer*/
+/*{*/
+/*    padding: 5px 0 5px 0;*/
+/*    background-color: #222;*/
+/*    font-size: small;*/
+/*}*/
 
-    /* Main page right column style */
-    .right
-    {
-        grid-column: 3/4;
-    }
+/*!* Hide computer left footer text *!*/
+/*.align-left*/
+/*{*/
+/*    display: none;*/
+/*}*/
 
-    /* Icon style */
-    .icon
-    {
-        position: relative;
-        top: 2px;
-        height: 1em;
-    }
+/*!* Hide computer center footer text *!*/
+/*.align-center*/
+/*{*/
+/*    display: none;*/
+/*}*/
 
-    /* Preview images style */
-    .thumbnail
-    {
-        position: relative;
-        top: -5px;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-    }
+/*!* Right footer text style *!*/
+/*.align-right*/
+/*{*/
+/*    text-align: center;*/
+/*}*/
 
-    /* Drop shadow */
-    .shadow
-    {
-        box-shadow: black 0 0 50px;
-    }
+/*!* Gray color *!*/
+/*.gray*/
+/*{*/
+/*    color: #555;*/
+/*}*/
 
-    /* Padding */
-    .padding
-    {
-        padding: 15px 30px 15px 30px;
-    }
+/*.huge*/
+/*{*/
+/*    font-size: 300px;*/
+/*    margin: 50px 0 -50px 0;*/
+/*}*/
 
-    /* Footer style */
-    .footer
-    {
-        grid-row: 4/5;
-        grid-column: 1/4;
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
+/*.space-after*/
+/*{*/
+/*    padding-bottom: 250px; !* Only works for 1000 height *!*/
+/*}*/
 
-    /* Left footer text style */
-    .align-left
-    {
-        display: initial;
-        text-align: left;
-        padding-left: 15px;
-        grid-column: 1/2;
-    }
+/*#theme-chooser*/
+/*{*/
+/*    position: absolute;*/
+/*    margin-right: 50px;*/
+/*    width: 40px;*/
+/*    height: auto;*/
+/*    right: 0;*/
+/*}*/
 
-    /* Center footer text style */
-    .align-center
-    {
-        display: initial;
-        text-align: center;
-        grid-column: 2/3;
-    }
+/*!*                      (default 0px-799px)                      *!*/
+/*!*      ↑ Everything above this line applies to mobile ↑         *!*/
+/*!* ------------------------------------------------------------- *!*/
+/*!*     ↓ Everything below this line applies to computer ↓        *!*/
+/*!*                     (overridden 800px-∞px)                    *!*/
 
-    /* Right footer text style */
-    .align-right
-    {
-        text-align: right;
-        padding-right: 15px;
-        grid-column: 3/4;
-    }
+/*@media only screen and (min-width: 800px)*/
+/*{*/
+/*    !* Style applies to entire page *!*/
+/*    body*/
+/*    {*/
+/*        display: grid;*/
+/*        grid-template-columns: 20% 60% 20%;*/
+/*        grid-template-rows: auto auto auto auto;*/
+/*    }*/
 
-    /* List style */
-    .array li
-    {
-        position: relative;
-        float: left;
-        margin: 0;
-        padding: 0;
-        left: -19px;
-    }
+/*    !* Background video style *!*/
+/*    .background-video*/
+/*    {*/
+/*        min-width: 100%;*/
+/*    }*/
 
-    /* Horizontal list style */
-    .horizontal li
-    {
-        display: inline;
-    }
+/*    !* Static color background style *!*/
+/*    .background*/
+/*    {*/
+/*        position: fixed;*/
+/*        top: 0;*/
+/*        left: 0;*/
+/*        width: 100%;*/
+/*        height: 100%;*/
+/*        background-color: #222;*/
+/*        z-index: -1;*/
+/*    }*/
 
-    /* Alternative link style */
-    .link
-    {
-        text-decoration: underline;
-    }
+/*    !* Navigation bar style *!*/
+/*    .navigation-bar*/
+/*    {*/
+/*        display: flex;*/
+/*        align-items: center;*/
+/*        background-color: #222;*/
+/*        grid-row: 1/2;*/
+/*        grid-column: 1/4;*/
+/*    }*/
 
-    /* Alternative link hover style */
-    .link:hover
-    {
-        color: lightgray;
-    }
+/*    !* Navigation card container style *!*/
+/*    .card-container*/
+/*    {*/
+/*        grid-column: 1/4;*/
+/*        grid-row: 2/3;*/
+/*        display: grid;*/
+/*        grid-template-columns: auto auto;*/
+/*        justify-content: center;*/
+/*        padding: 50px 10% 50px 10%;*/
+/*    }*/
 
-    /* Alternative link click style */
-    .link:active
-    {
-        color: gray;
-    }
+/*    !* Navigation card style *!*/
+/*    .card*/
+/*    {*/
+/*        background-color: #222;*/
+/*        text-align: center;*/
+/*        border-radius: 30px;*/
+/*        width: 300px;*/
+/*        margin: 50px;*/
+/*    }*/
 
-    /* Hide mobile title */
-    .mobile-title
-    {
-        display: none;
-    }
+/*    !* Main page style *!*/
+/*    .main*/
+/*    {*/
+/*        grid-row: 3/4;*/
+/*        grid-column: 1/4;*/
+/*        display: grid;*/
+/*        grid-template-columns: 45% 10% 45%;*/
+/*        padding: 50px 50px 50px 50px;*/
+/*    }*/
 
-    /* Hide mobile subtitle */
-    .mobile-subtitle
-    {
-        display: none;
-    }
+/*    !* Post container style *!*/
+/*    .post-container*/
+/*    {*/
+/*        width: 100%;*/
+/*        grid-column: 2/3;*/
+/*    }*/
 
-    /* Hide mobile navigation menu button */
-    .mobile-menu-button
-    {
-        display: none;
-    }
-}
+/*    !* Post style *!*/
+/*    .post*/
+/*    {*/
+/*        margin: 5% 0 5% 0;*/
+/*        width: 100%;*/
+/*        border-radius: 30px;*/
+/*        padding: 0;*/
+/*    }*/
+
+/*    !* Hide mobile post divider *!*/
+/*    .post::after*/
+/*    {*/
+/*        display: none;*/
+/*    }*/
+
+/*    !* Main page left column style *!*/
+/*    .left*/
+/*    {*/
+/*        grid-column: 1/2;*/
+/*    }*/
+
+/*    !* Main page right column style *!*/
+/*    .right*/
+/*    {*/
+/*        grid-column: 3/4;*/
+/*    }*/
+
+/*    !* Icon style *!*/
+/*    .icon*/
+/*    {*/
+/*        position: relative;*/
+/*        top: 2px;*/
+/*        height: 1em;*/
+/*    }*/
+
+/*    !* Preview images style *!*/
+/*    .thumbnail*/
+/*    {*/
+/*        position: relative;*/
+/*        top: -5px;*/
+/*        border-top-left-radius: 30px;*/
+/*        border-top-right-radius: 30px;*/
+/*    }*/
+
+/*    !* Drop shadow *!*/
+/*    .shadow*/
+/*    {*/
+/*        box-shadow: black 0 0 50px;*/
+/*    }*/
+
+/*    !* Padding *!*/
+/*    .padding*/
+/*    {*/
+/*        padding: 15px 30px 15px 30px;*/
+/*    }*/
+
+/*    !* Footer style *!*/
+/*    .footer*/
+/*    {*/
+/*        grid-row: 4/5;*/
+/*        grid-column: 1/4;*/
+/*        display: grid;*/
+/*        grid-template-columns: auto auto auto;*/
+/*    }*/
+
+/*    !* Left footer text style *!*/
+/*    .align-left*/
+/*    {*/
+/*        display: initial;*/
+/*        text-align: left;*/
+/*        padding-left: 15px;*/
+/*        grid-column: 1/2;*/
+/*    }*/
+
+/*    !* Center footer text style *!*/
+/*    .align-center*/
+/*    {*/
+/*        display: initial;*/
+/*        text-align: center;*/
+/*        grid-column: 2/3;*/
+/*    }*/
+
+/*    !* Right footer text style *!*/
+/*    .align-right*/
+/*    {*/
+/*        text-align: right;*/
+/*        padding-right: 15px;*/
+/*        grid-column: 3/4;*/
+/*    }*/
+
+/*    !* List style *!*/
+/*    .array li*/
+/*    {*/
+/*        position: relative;*/
+/*        float: left;*/
+/*        margin: 0;*/
+/*        padding: 0;*/
+/*        left: -19px;*/
+/*    }*/
+
+/*    !* Horizontal list style *!*/
+/*    .horizontal li*/
+/*    {*/
+/*        display: inline;*/
+/*    }*/
+
+/*    !* Alternative link style *!*/
+/*    .link*/
+/*    {*/
+/*        text-decoration: underline;*/
+/*    }*/
+
+/*    !* Alternative link hover style *!*/
+/*    .link:hover*/
+/*    {*/
+/*        color: lightgray;*/
+/*    }*/
+
+/*    !* Alternative link click style *!*/
+/*    .link:active*/
+/*    {*/
+/*        color: gray;*/
+/*    }*/
+
+/*    !* Hide mobile title *!*/
+/*    .mobile-title*/
+/*    {*/
+/*        display: none;*/
+/*    }*/
+
+/*    !* Hide mobile subtitle *!*/
+/*    .mobile-subtitle*/
+/*    {*/
+/*        display: none;*/
+/*    }*/
+
+/*    !* Hide mobile navigation menu button *!*/
+/*    .mobile-menu-button*/
+/*    {*/
+/*        display: none;*/
+/*    }*/
+/*}*/

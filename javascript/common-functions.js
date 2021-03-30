@@ -50,7 +50,7 @@ function loadTheme()
 {
     // TODO: Improve theme changing
 
-    const button = document.getElementById("theme-chooser");
+/*    const button = document.getElementById("theme-chooser");
     let all;
 
     if (theme === "light")
@@ -188,5 +188,5 @@ function loadTheme()
         {
             all[i].style.color = "white";
         }
-    }
+    }*/
 }
