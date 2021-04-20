@@ -9,7 +9,7 @@
 
         <!-- Link preview -->
         <meta property="og:title" content="404">
-        <meta property="og:url" content="https://skoleopplegg.github.io">
+        <meta property="og:url" content="https://smule.yessness.com/">
         <meta property="og:description" content="Samuel sin nettside i konseptutvikling og programmering">
         <meta property="og:image" content="/icon.png">
         <meta property="og:site_name" content="Samuels hjørne">
@@ -36,63 +36,89 @@
         <meta name="theme-color" content="#3ba3a1">
     </head>
     <body>
-        <video autoplay loop muted playsinline class="background-video">
-            <source src="assets/background.mp4" type="video/mp4">
-            There was an error playing the video
-        </video>
-        <div class="background"></div>
-        <div class="navigation-bar padding shadow">
-            <ul class="horizontal array">
-                <li><a href="index.html"><h1>Samuels hjørne</h1></a></li>
-                <li class="gray"><h1>&nbsp;&nbsp;|&nbsp;&nbsp;</h1></li>
-                <li><h1>404</h1></li>
-            </ul>
-            <img id="theme-chooser" src="assets/icons/sun.png" alt="Theme Chooser" onclick="changeTheme()">
+        <!-- Header -->
+        <div id="header">
+            <a href="index.html"><h1>Samuels hjørne</h1></a>
+            <a href="#"><h2>Skole</h2></a>
+            <a href="fritidsaktiviteter.html"><h2>Fritid</h2></a>
         </div>
 
-        <!-- Mobile navigation menu -->
-        <h1 class="mobile-subtitle">404</h1>
-        <img class="mobile-menu-button" onclick="openMenu()" id="menu-button" src="assets/icons/menu.png" alt="Menu Button">
-        <div class="mobile-menu-overlay" id="overlay"></div>
-        <div class="mobile-menu" id="menu">
-            <a href="index.html" onclick="closeMenu()"><img class="mobile-home-button" src="assets/icons/home.png" alt="Home Button"></a>
-            <img class="mobile-close-button" onclick="closeMenu()" id="close-button" src="assets/icons/close.png" alt="Close Button">
-            <div class="menu-links" id="links">
-                <a href="skolearbeid.html"><h1>Skolearbeid</h1></a>
-                <a href="fritidsaktiviteter.html"><h1>Fritidsaktiviteter</h1></a>
-                <div class="mobile-links">
-                    <a href="faq.html"><h3>FAQ</h3></a>
-                    <a href="https://github.com/skoleopplegg/skoleopplegg.github.io" target="_blank"><h3>GitHub</h3></a>
-                    <a href="https://twitter.com/soni801_" target="_blank"><h3>Twitter</h3></a>
-                    <a href="https://www.youtube.com/soni801" target="_blank"><h3>YouTube</h3></a>
-                    <a href="https://www.twitch.tv/soni801" target="_blank"><h3>Twitch</h3></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 404 Display -->
-        <div class="align-center space-after">
-            <h1 class="huge">404</h1>
-            <h1>Siden du prøver å nå, eksisterer ikke.</h1>
-            <p>Linken kan være ødelagt eller siden kan være slettet.<br>Prøv å <a href="index.html" class="link">gå tilbake til forsiden</a> eller <a href="mailto:mail.soni801@gmail.com" class="link">kontakt meg</a>.</p>
+        <!-- Title -->
+        <div id="welcome">
+            <h6>404</h6>
         </div>
 
         <!-- Footer -->
-        <div class="footer">
-            <p class="align-left">Kontakt meg: <a href="mailto:mail.soni801@gmail.com" class="link">mail.soni801@gmail.com</a>.</p>
-            <ul class="horizontal align-center">
-                <li><a href="faq.html">FAQ</a></li>
-                <li class="gray">|</li>
-                <li><a href="https://github.com/skoleopplegg/skoleopplegg.github.io" target="_blank"><img class="icon" src="assets/icons/github.png" alt="GitHub icon"> GitHub</a></li>
-                <li class="gray">|</li>
-                <li><a href="https://twitter.com/soni801_" target="_blank"><img class="icon" src="assets/icons/twitter.png" alt="Twitter icon"> Twitter</a></li>
-                <li class="gray">|</li>
-                <li><a href="https://www.youtube.com/soni801" target="_blank"><img class="icon" src="assets/icons/youtube.png" alt="YouTube icon"> YouTube</a></li>
-                <li class="gray">|</li>
-                <li><a href="https://www.twitch.tv/soni801" target="_blank"><img class="icon" src="assets/icons/twitch.png" alt="Twitch icon"> Twitch</a></li>
+        <div id="footer">
+            <p>Copyright © 2021, Samuel Aasen</p>
+            <ul>
+                <li><a href="https://github.com/soni801/school-website" target="_blank"><img src="assets/icons/github.png" alt="GitHub icon"> GitHub</a></li>
+                <li>|</li>
+                <li><a href="https://twitter.com/soni801_" target="_blank"><img src="assets/icons/twitter.png" alt="Twitter icon"> Twitter</a></li>
+                <li>|</li>
+                <li><a href="https://www.youtube.com/soni801" target="_blank"><img src="assets/icons/youtube.png" alt="YouTube icon"> YouTube</a></li>
+                <li>|</li>
+                <li><a href="https://www.twitch.tv/soni801" target="_blank"><img src="assets/icons/twitch.png" alt="Twitch icon"> Twitch</a></li>
             </ul>
-            <p class="align-right">Copyright Samuel Aasen © 2020-2021</p>
         </div>
+
+<!--        <video autoplay loop muted playsinline class="background-video">-->
+<!--            <source src="assets/background.mp4" type="video/mp4">-->
+<!--            There was an error playing the video-->
+<!--        </video>-->
+<!--        <div class="background"></div>-->
+<!--        <div class="navigation-bar padding shadow">-->
+<!--            <ul class="horizontal array">-->
+<!--                <li><a href="index.html"><h1>Samuels hjørne</h1></a></li>-->
+<!--                <li class="gray"><h1>&nbsp;&nbsp;|&nbsp;&nbsp;</h1></li>-->
+<!--                <li><h1>404</h1></li>-->
+<!--            </ul>-->
+<!--            <img id="theme-chooser" src="assets/icons/sun.png" alt="Theme Chooser" onclick="changeTheme()">-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Mobile navigation menu &ndash;&gt;-->
+<!--        <h1 class="mobile-subtitle">404</h1>-->
+<!--        <img class="mobile-menu-button" onclick="openMenu()" id="menu-button" src="assets/icons/menu.png" alt="Menu Button">-->
+<!--        <div class="mobile-menu-overlay" id="overlay"></div>-->
+<!--        <div class="mobile-menu" id="menu">-->
+<!--            <a href="index.html" onclick="closeMenu()"><img class="mobile-home-button" src="assets/icons/home.png" alt="Home Button"></a>-->
+<!--            <img class="mobile-close-button" onclick="closeMenu()" id="close-button" src="assets/icons/close.png" alt="Close Button">-->
+<!--            <div class="menu-links" id="links">-->
+<!--                <a href="skolearbeid.html"><h1>Skolearbeid</h1></a>-->
+<!--                <a href="fritidsaktiviteter.html"><h1>Fritidsaktiviteter</h1></a>-->
+<!--                <div class="mobile-links">-->
+<!--                    <a href="faq.html"><h3>FAQ</h3></a>-->
+<!--                    <a href="https://github.com/skoleopplegg/skoleopplegg.github.io" target="_blank"><h3>GitHub</h3></a>-->
+<!--                    <a href="https://twitter.com/soni801_" target="_blank"><h3>Twitter</h3></a>-->
+<!--                    <a href="https://www.youtube.com/soni801" target="_blank"><h3>YouTube</h3></a>-->
+<!--                    <a href="https://www.twitch.tv/soni801" target="_blank"><h3>Twitch</h3></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; 404 Display &ndash;&gt;-->
+<!--        <div class="align-center space-after">-->
+<!--            <h1 class="huge">404</h1>-->
+<!--            <h1>Siden du prøver å nå, eksisterer ikke.</h1>-->
+<!--            <p>Linken kan være ødelagt eller siden kan være slettet.<br>Prøv å <a href="index.html" class="link">gå tilbake til forsiden</a> eller <a href="mailto:mail.soni801@gmail.com" class="link">kontakt meg</a>.</p>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Footer &ndash;&gt;-->
+<!--        <div class="footer">-->
+<!--            <p class="align-left">Kontakt meg: <a href="mailto:mail.soni801@gmail.com" class="link">mail.soni801@gmail.com</a>.</p>-->
+<!--            <ul class="horizontal align-center">-->
+<!--                <li><a href="faq.html">FAQ</a></li>-->
+<!--                <li class="gray">|</li>-->
+<!--                <li><a href="https://github.com/skoleopplegg/skoleopplegg.github.io" target="_blank"><img class="icon" src="assets/icons/github.png" alt="GitHub icon"> GitHub</a></li>-->
+<!--                <li class="gray">|</li>-->
+<!--                <li><a href="https://twitter.com/soni801_" target="_blank"><img class="icon" src="assets/icons/twitter.png" alt="Twitter icon"> Twitter</a></li>-->
+<!--                <li class="gray">|</li>-->
+<!--                <li><a href="https://www.youtube.com/soni801" target="_blank"><img class="icon" src="assets/icons/youtube.png" alt="YouTube icon"> YouTube</a></li>-->
+<!--                <li class="gray">|</li>-->
+<!--                <li><a href="https://www.twitch.tv/soni801" target="_blank"><img class="icon" src="assets/icons/twitch.png" alt="Twitch icon"> Twitch</a></li>-->
+<!--            </ul>-->
+<!--            <p class="align-right">Copyright Samuel Aasen © 2020-2021</p>-->
+<!--        </div>-->
 
         <!-- Scripts -->
         <script src="javascript/common-functions.js"></script>

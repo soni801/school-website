@@ -1,13 +1,6 @@
 /* Poppins font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/*!* Montserrat font *!*/
-/*@font-face*/
-/*{*/
-/*    font-family: Montserrat;*/
-/*    src: url(assets/fonts/Montserrat.ttf);*/
-/*}*/
-
 /* Set scroll behaviour */
 html
 {
@@ -85,6 +78,13 @@ a
     border-radius: 100px;
 }
 
+h6
+{
+    margin-top: -28vh;
+    margin-bottom: -28vh;
+    font-size: 50vh;
+}
+
 #body
 {
     background: inherit;
@@ -126,8 +126,7 @@ li
 }
 
 
-
-
+/* ------------------------------------------------------------------------------------------------------------- */
 
 
 /*!* Primary link style *!*/
