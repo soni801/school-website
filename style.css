@@ -13,15 +13,24 @@
 
 html
 {
-    scroll-behavior: smooth; /* Scroll behaviour */
+    scroll-behavior: smooth; /* Smooth scrolling on supported browsers */
+
+    /* TODO: Store reused values in variables */
 }
 
 body
 {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
     font-family: Poppins, sans-serif;
     margin: 0;
     color: #1e152a;
     background: #f9f5ff;
+    position: relative;
+    top: 100px;
+    overflow-x: hidden;
 }
 
 /* 1.2 Tag selectors */
@@ -64,20 +73,22 @@ a
     left: 0;
     content: "";
     height: 5px;
-    width: 0;
-    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    background: #13505b;
     transition: ease 250ms;
+    transform-origin: left;
+    transform: scaleX(0);
 }
 
 #header h2:hover::after
 {
-    background: #13505b;
-    width: 100%;
+    transform: scaleX(1);
 }
 
 /* 2.2 Footer */
 #footer
 {
+    width: 98vw;
     padding: 0 30px;
 }
 
@@ -102,16 +113,27 @@ a
 
 #welcome
 {
-    text-align: center;
-    padding: 300px;
-    margin-top: 100px;
+    background: linear-gradient(to right, #13505b, #3ba3a1);
+    width: 38rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    display: flex;
+    margin: 12rem 0;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
 }
 
-#welcome a
+#welcome img
 {
-    background-color: #3ba3a1;
-    padding: 7px 16px;
-    border-radius: 100px;
+    width: 12rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+
+#welcome p
+{
+    margin: 0;
 }
 
 h6
