@@ -5,6 +5,9 @@
     2 Recurring selectors
         2.1 Header
         2.2 Footer
+    3 Individual selectors
+        3.1 Welcome card
+        3.2 Body
  */
 
 /* 1 BROAD SELECTORS */
@@ -34,6 +37,8 @@ body
     position: relative;
     top: 100px;
     overflow-x: hidden;
+
+    /* TODO: Add custom scrollbar */
 }
 
 /* 1.2 Tag selectors */
@@ -41,6 +46,11 @@ a
 {
     color: inherit;
     text-decoration: none;
+}
+
+li
+{
+    display: inline;
 }
 
 /* 2 RECURRING SELECTORS */
@@ -114,6 +124,8 @@ a
     float: right;
 }
 
+/* 3 INDIVIDUAL SELECTORS */
+/* 3.1 Welcome card */
 #welcome
 {
     background: linear-gradient(to right, var(--accent-dark), var(--accent-light));
@@ -121,7 +133,7 @@ a
     padding: 1rem;
     border-radius: 1.5rem;
     display: flex;
-    margin: 12rem 0;
+    margin: 30vh 0;
     color: var(--light);
     font-size: 25px;
     font-weight: 700;
@@ -139,27 +151,11 @@ a
     margin: 0;
 }
 
-h6
-{
-    margin-top: -28vh;
-    margin-bottom: -28vh;
-    font-size: 50vh;
-}
-
+/* 3.2 Body */
 #body
 {
-    background: inherit;
-    padding: 30px;
-}
-
-.tiny-shadow
-{
-    box-shadow: 0 0 7px #1e152a;
-}
-
-li
-{
-    display: inline;
+    text-align: center;
+    padding: 10rem;
 }
 
 /* ------------------------------------------------------------------------------------------------------------- */
