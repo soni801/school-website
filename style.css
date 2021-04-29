@@ -55,6 +55,18 @@ li
     display: inline;
 }
 
+button
+{
+    border-radius: 5em;
+    outline: none;
+    border: none;
+    background: rgba(var(--dark), .15);
+    width: 5rem;
+    height: 5rem;
+    font-size: 30px;
+    color: rgba(var(--dark), .5);
+}
+
 /* 2 RECURRING SELECTORS */
 /* 2.1 Header */
 #header
