@@ -15,7 +15,10 @@ html
 {
     scroll-behavior: smooth; /* Smooth scrolling on supported browsers */
 
-    /* TODO: Store reused values in variables */
+    --light: #f9f5ff;
+    --dark: #1e152a;
+    --accent-dark: #13505b;
+    --accent-light: #3ba3a1;
 }
 
 body
@@ -26,8 +29,8 @@ body
     align-items: center;
     font-family: Poppins, sans-serif;
     margin: 0;
-    color: #1e152a;
-    background: #f9f5ff;
+    color: var(--dark);
+    background: var(--light);
     position: relative;
     top: 100px;
     overflow-x: hidden;
@@ -74,7 +77,7 @@ a
     content: "";
     height: 5px;
     width: 100%;
-    background: #13505b;
+    background: var(--accent-dark);
     transition: ease 250ms;
     transform-origin: left;
     transform: scaleX(0);
@@ -113,13 +116,13 @@ a
 
 #welcome
 {
-    background: linear-gradient(to right, #13505b, #3ba3a1);
+    background: linear-gradient(to right, var(--accent-dark), var(--accent-light));
     width: 38rem;
     padding: 1rem;
     border-radius: 1.5rem;
     display: flex;
     margin: 12rem 0;
-    color: white;
+    color: var(--light);
     font-size: 25px;
     font-weight: 700;
 }
