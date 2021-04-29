@@ -8,6 +8,8 @@
     3 Individual selectors
         3.1 Welcome card
         3.2 Body
+    4 Animations
+        4.1 Welcome card
  */
 
 /* 1 BROAD SELECTORS */
@@ -18,10 +20,10 @@ html
 {
     scroll-behavior: smooth; /* Smooth scrolling on supported browsers */
 
-    --light: #f9f5ff;
-    --dark: #1e152a;
-    --accent-dark: #13505b;
-    --accent-light: #3ba3a1;
+    --light: 249, 245, 255;
+    --dark: 30, 21, 42;
+    --accent-dark: 19, 80, 91;
+    --accent-light: 59, 163, 161;
 }
 
 body
@@ -32,8 +34,8 @@ body
     align-items: center;
     font-family: Poppins, sans-serif;
     margin: 0;
-    color: var(--dark);
-    background: var(--light);
+    color: rgb(var(--dark));
+    background: rgb(var(--light));
     position: relative;
     top: 100px;
     overflow-x: hidden;
@@ -65,6 +67,7 @@ li
     position: fixed;
     top: 0;
     height: 100px;
+    text-shadow: rgba(var(--dark), .1) 0 0 1rem;
 }
 
 #header h1
@@ -87,7 +90,7 @@ li
     content: "";
     height: 5px;
     width: 100%;
-    background: var(--accent-dark);
+    background: rgb(var(--accent-dark));
     transition: ease 250ms;
     transform-origin: left;
     transform: scaleX(0);
@@ -103,6 +106,7 @@ li
 {
     width: 98vw;
     padding: 0 30px;
+    text-shadow: rgba(var(--dark), .15) 0 0 1rem;
 }
 
 #footer img
@@ -128,15 +132,18 @@ li
 /* 3.1 Welcome card */
 #welcome
 {
-    background: linear-gradient(to right, var(--accent-dark), var(--accent-light));
+    background: linear-gradient(115deg, rgb(var(--accent-dark)), rgb(var(--accent-light)), rgb(var(--accent-dark)), rgb(var(--accent-light)));
+    background-size: 400%;
     width: 38rem;
     padding: 1rem;
     border-radius: 1.5rem;
     display: flex;
     margin: 30vh 0;
-    color: var(--light);
+    color: rgba(var(--light), .95);
     font-size: 25px;
     font-weight: 700;
+    animation: welcome-card-bg 12s infinite linear; /* TODO: Fix animation on subpages */
+    box-shadow: rgba(var(--dark), .5) 0 0 2rem;
 }
 
 #welcome img
@@ -144,11 +151,13 @@ li
     width: 12rem;
     border-radius: 1rem;
     margin-right: 1rem;
+    box-shadow: rgba(var(--dark), .2) 0 0 1rem;
 }
 
 #welcome p
 {
     margin: 0;
+    text-shadow: rgba(var(--dark), .2) 0 0 1rem;
 }
 
 /* 3.2 Body */
@@ -156,6 +165,26 @@ li
 {
     text-align: center;
     padding: 10rem;
+}
+
+#body h2
+{
+    text-shadow: rgba(var(--dark), .1) 0 0 1rem;
+}
+
+/* 4 ANIMATIONS */
+/* 4.1 Welcome card */
+@keyframes welcome-card-bg
+{
+    0%
+    {
+        background-position: 0;
+    }
+
+    100%
+    {
+        background-position: 90%;
+    }
 }
 
 /* ------------------------------------------------------------------------------------------------------------- */
