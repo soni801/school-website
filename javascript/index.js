@@ -1,13 +1,14 @@
-let schoolCardFocus = 1;
-rearrange(schoolCardFocus);
+let cardFocus = [1, 1];
+rearrange(cardFocus[0], 0);
+rearrange(cardFocus[1], 1);
 
-function rearrange(card)
+function rearrange(card, collection)
 {
     if (card > 2) card -= 3;
     if (card < 0) card += 3;
-    schoolCardFocus = card;
+    cardFocus[collection] = card;
 
-    let cards = document.querySelectorAll("#school-projects-cards .card");
+    let cards = collection === 0 ? document.querySelectorAll("#school-projects-cards .card") : document.querySelectorAll("#other-projects-cards .card");
     for(let i = 0; i < cards.length; i++)
     {
         cards[i].classList.remove("card-left");
