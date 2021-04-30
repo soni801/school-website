@@ -2,6 +2,32 @@ let cardFocus = [1, 1];
 rearrange(cardFocus[0], 0);
 rearrange(cardFocus[1], 1);
 
+// Load preview cards
+fetch("../content/skolearbeid.json")
+    .then(response => response.json())
+    .then(data =>
+    {
+        for (let i = 0; i < 3; i++)
+        {
+            document.querySelector("#school-card-" + (i + 1) + " .card-content h2").innerHTML = data.skolearbeid[i].title;
+            document.querySelector("#school-card-" + (i + 1) + " .card-content p").innerHTML = data.skolearbeid[i].content;
+            document.querySelector("#school-card-" + (i + 1) + " .card-image").src = data.skolearbeid[i].image;
+        }
+    });
+
+fetch("../content/fritidsaktiviteter.json")
+    .then(response => response.json())
+    .then(data =>
+    {
+        for (let i = 0; i < 3; i++)
+        {
+            document.querySelector("#other-card-" + (i + 1) + " .card-content h2").innerHTML = data.fritidsaktiviteter[i].title;
+            document.querySelector("#other-card-" + (i + 1) + " .card-content p").innerHTML = data.fritidsaktiviteter[i].content;
+            document.querySelector("#other-card-" + (i + 1) + " .card-image").src = data.fritidsaktiviteter[i].image;
+        }
+    });
+
+// Rearrange preview cards
 function rearrange(card, collection)
 {
     if (card > 2) card -= 3;
