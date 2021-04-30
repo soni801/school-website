@@ -156,8 +156,15 @@ button
     color: rgba(var(--light), .95);
     font-size: 25px;
     font-weight: 700;
-    animation: welcome-card-bg 12s infinite linear; /* TODO: Fix animation on subpages */
+    animation: welcome-card-bg 12s infinite linear;
     box-shadow: rgba(var(--dark), .5) 0 0 2rem;
+    user-select: none;
+    transition: 300ms ease;
+}
+
+#welcome:hover
+{
+    transform: scale(1.07);
 }
 
 #welcome img
@@ -226,6 +233,8 @@ button
     box-shadow: rgba(var(--dark), .7) 0 0 1rem;
     transition: 300ms ease;
     text-align: left;
+    filter: brightness(.6);
+    z-index: 1;
 }
 
 .card-image
@@ -249,19 +258,18 @@ button
 
 .card-left
 {
-    transform: scale(.8) translate(-10rem, 0);
-    z-index: 1;
+    transform: scale(.8) translate(-12rem, 0);
 }
 
 .card-center
 {
     z-index: 3;
+    filter: none;
 }
 
 .card-right
 {
-    transform: scale(.8) translate(10rem, 0);
-    z-index: 1;
+    transform: scale(.8) translate(12rem, 0);
 }
 
 /* 4 ANIMATIONS */
