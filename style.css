@@ -8,7 +8,7 @@
     3 Individual selectors
         3.1 Welcome card
         3.2 Body
-        3.3 Preview cards
+        3.3 Projects preview
     4 Animations
         4.1 Welcome card
  */
@@ -81,6 +81,7 @@ button
     top: 0;
     height: 100px;
     text-shadow: rgba(var(--dark), .1) 0 0 1rem;
+    z-index: 4;
 }
 
 #header h1
@@ -186,7 +187,19 @@ button
     text-shadow: rgba(var(--dark), .1) 0 0 1rem;
 }
 
-/* 3.3 Preview cards */
+/* 3.3 Projects preview */
+#projects
+{
+    text-align: center;
+    margin-top: -5rem;
+    margin-bottom: 3rem;
+}
+
+#projects h1
+{
+    margin-top: 6rem;
+}
+
 #school-projects, #other-projects
 {
     display: flex;
@@ -212,6 +225,7 @@ button
     left: calc(50% - 17rem / 2);
     box-shadow: rgba(var(--dark), .7) 0 0 1rem;
     transition: 300ms ease;
+    text-align: left;
 }
 
 .card-image
