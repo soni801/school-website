@@ -65,8 +65,28 @@
         <!-- Projects preview -->
         <div id="projects">
             <div id="school-projects">
-                <button>←</button>
-                <button>→</button>
+                <button onclick="rearrange(current-1)">←</button>
+                <div id="school-projects-cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Supermat</h2>
+                            <p>Her skulle vi lage en fiksjonell "supermat" som inneholdt akkurat riktig mengde næringsstoffer og mineraler. Jeg lagde min 'råbar'.</p>-->
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Bildeserie</h2>
+                            <p>Denne oppgaven gikk ut på å fortelle en historie ved hjelp av bilder. Vi skulle både ta og redigere 4 bilder for å kunne fortelle en meningsfull historie ut i fra de.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Nettside</h2>
+                            <p>Vi skulle lage en nettside for å vise hva vi gjør på linjen, som en litt annerledes skrivebok.</p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="rearrange(current+1)">→</button>
             </div>
             <div id="other-projects">
                 <button>←</button>

@@ -8,6 +8,7 @@
     3 Individual selectors
         3.1 Welcome card
         3.2 Body
+        3.3 Preview cards
     4 Animations
         4.1 Welcome card
  */
@@ -161,6 +162,7 @@ button
 #welcome img
 {
     width: 12rem;
+    height: 12rem;
     border-radius: 1rem;
     margin-right: 1rem;
     box-shadow: rgba(var(--dark), .2) 0 0 1rem;
@@ -182,6 +184,65 @@ button
 #body h2
 {
     text-shadow: rgba(var(--dark), .1) 0 0 1rem;
+}
+
+/* 3.3 Preview cards */
+#school-projects, #other-projects
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    position: relative;
+    height: 25rem;
+}
+
+.card
+{
+    background-image: url(content/skolearbeid/nettside/preview.png);
+    color: rgb(var(--light));
+    width: 17rem;
+    height: 25rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 17rem / 2);
+    box-shadow: rgba(var(--dark), .7) 0 0 1rem;
+    transition: 300ms ease;
+}
+
+.card-content
+{
+    background: linear-gradient(to top, rgb(var(--dark)), rgb(var(--dark), .7), rgba(var(--dark), 0));
+}
+
+.card h2, .card p
+{
+    margin: 1rem;
+    text-shadow: rgba(var(--dark), .3) 0 0 1rem;
+    color: rgba(var(--light), .97);
+}
+
+.card-left
+{
+    transform: scale(.8) translate(-10rem, 0);
+    z-index: 1;
+}
+
+.card-center
+{
+    z-index: 3;
+}
+
+.card-right
+{
+    transform: scale(.8) translate(10rem, 0);
+    z-index: 1;
 }
 
 /* 4 ANIMATIONS */
