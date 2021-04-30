@@ -1,11 +1,11 @@
-let current = 1;
-rearrange(current);
+let schoolCardFocus = 1;
+rearrange(schoolCardFocus);
 
 function rearrange(card)
 {
     if (card > 2) card -= 3;
     if (card < 0) card += 3;
-    current = card;
+    schoolCardFocus = card;
 
     let cards = document.querySelectorAll("#school-projects-cards .card");
     for(let i = 0; i < cards.length; i++)

@@ -200,8 +200,6 @@ button
 
 .card
 {
-    background-image: url(content/skolearbeid/nettside/preview.png);
-    color: rgb(var(--light));
     width: 17rem;
     height: 25rem;
     border-radius: 2rem;
@@ -214,6 +212,13 @@ button
     left: calc(50% - 17rem / 2);
     box-shadow: rgba(var(--dark), .7) 0 0 1rem;
     transition: 300ms ease;
+}
+
+.card-image
+{
+    position: absolute;
+    height: 25rem;
+    z-index: -1;
 }
 
 .card-content
