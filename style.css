@@ -69,6 +69,7 @@ button
     color: rgba(var(--dark), .5);
     cursor: pointer;
     box-shadow: rgba(var(--dark), .2) 0 0 1rem;
+    text-shadow: rgba(var(--dark), .3) 0 0 .5rem;
     transition: 200ms ease;
 }
 
@@ -143,8 +144,9 @@ button:hover
 /* 2.2 Footer */
 #footer
 {
-    width: 98vw;
-    padding: 0 30px;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 1rem;
     text-shadow: rgba(var(--dark), .15) 0 0 1rem;
 }
 

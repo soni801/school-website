@@ -1,17 +1,17 @@
 {
   "fritidsaktiviteter": [
     {
-      "image": "content/fritidsaktiviteter/linerider/preview.png",
+      "image": "content/fritidsaktiviteter/kubing.png",
       "title": "Kubing",
       "content": "Kubing går ut på å løse en Rubik's kube så fort som mulig. Min rekord er 12.89 sekunder."
     },
     {
-      "image": "content/fritidsaktiviteter/redsea/preview.png",
+      "image": "content/fritidsaktiviteter/redsea.png",
       "title": "Redsea Productions",
       "content": "Redsea Productions er et lite programvareutviklingsstudio som jeg og noen venner laget."
     },
     {
-      "image": "content/fritidsaktiviteter/linerider/preview.png",
+      "image": "content/fritidsaktiviteter/linerider.png",
       "title": "Line Rider",
       "content": "Line Rider er et spill der man produserer videoer av en person som kjører på kjelke på linjer man selv har tegnet."
     }
