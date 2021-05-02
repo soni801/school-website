@@ -11,6 +11,7 @@
         3.1 Welcome card
         3.2 Body
         3.3 Projects preview
+        3.4 Content
     4 Animations
         4.1 Welcome card
  */
@@ -228,6 +229,11 @@ button:hover
     box-shadow: none;
 }
 
+#welcome.subpage:hover
+{
+    transform: none;
+}
+
 /* 3.2 Body */
 #body
 {
@@ -317,6 +323,23 @@ button:hover
 .card-right
 {
     transform: scale(.8) translate(12rem, 0);
+}
+
+/* 3.4 Content */
+#content
+{
+    margin-top: 10rem;
+    text-align: center;
+    width: 60vw;
+    text-shadow: rgba(var(--dark), .1) 0 0 .6rem;
+}
+
+#content img
+{
+    margin-top: 5rem;
+    width: 70%;
+    border-radius: 3rem;
+    box-shadow: rgba(var(--dark), .4) 0 0 .8rem;
 }
 
 /* 4 ANIMATIONS */
