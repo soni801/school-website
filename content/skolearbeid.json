@@ -1,6 +1,34 @@
 {
   "skolearbeid": [
     {
+      "image": "",
+      "subject": "Konseptutvikling og programmering + Teknologiforståelse",
+      "title": "Værstasjon",
+      "content": "Her skulle vi måle forskjellige værdata og laste det opp til en database.",
+      "date": "26. apr. 2021"
+    },
+    {
+      "image": "",
+      "subject": "Konseptutvikling og programmering",
+      "title": "App",
+      "content": "Vi skulle utvikle en app for en valgfri kunde.",
+      "date": "26. mar. 2021"
+    },
+    {
+      "image": "",
+      "subject": "Teknologiforståelse",
+      "title": "Raspberry Pi",
+      "content": "Her skulle vi sette opp og teste forskjellige ting med en Raspberry Pi minidatamaskin.",
+      "date": "26. feb 2021"
+    },
+    {
+      "image": "",
+      "subject": "Konseptutvikling og programmering",
+      "title": "Database",
+      "content": "Dette var en oppgave om å lage en database og kjøre den lokalt, og å kunne legge inn og hente ut informasjon fra den.",
+      "date": "22. feb. 2021"
+    },
+    {
       "image": "content/skolearbeid/koronadagbok.png",
       "subject": "Produksjon og historiefortelling",
       "title": "Koronadagbok",
@@ -13,6 +41,13 @@
       "title": "LEGO Mindstorms",
       "content": "Dette var et prosjekt der vi ble delt inn i grupper og fikk i oppgave å programmere en LEGO-robot til å gjøre forskjellige oppgaver.",
       "date": "10. des. 2020"
+    },
+    {
+      "image": "",
+      "subject": "Konseptutvikling og programmering",
+      "title": "Veldedighetsstream",
+      "content": "Her skulle vi planlegge og gjennomføre en veldedighetsstream for å samle inn penger til Bring Children From Streets.",
+      "date": "9. des. 2020"
     },
     {
       "image": "content/skolearbeid/reklamefilm.png",
