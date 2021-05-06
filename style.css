@@ -43,8 +43,6 @@ body
     position: relative;
     top: 100px;
     overflow-x: hidden;
-
-    /* TODO: Add custom scrollbar */
 }
 
 /* 1.2 Tag selectors */
@@ -331,6 +329,8 @@ button:hover
 {
     margin-top: 10rem;
     color: rgb(var(--light));
+    width: 100%;
+    overflow: hidden;
 }
 
 #content > div
