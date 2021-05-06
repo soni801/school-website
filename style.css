@@ -114,6 +114,7 @@ button:hover
     background: inherit;
     position: fixed;
     top: 0;
+    left: 0;
     height: 100px;
     text-shadow: rgba(var(--dark), .1) 0 0 .5rem;
     z-index: 4;
@@ -329,17 +330,41 @@ button:hover
 #content
 {
     margin-top: 10rem;
-    text-align: center;
-    width: 60vw;
-    text-shadow: rgba(var(--dark), .1) 0 0 .6rem;
+    color: rgb(var(--light));
+}
+
+#content > div
+{
+    position: relative;
+    height: 100vh;
+}
+
+#content > div > div
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 #content img
 {
-    margin-top: 5rem;
-    width: 70%;
-    border-radius: 3rem;
-    box-shadow: rgba(var(--dark), .4) 0 0 .8rem;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(.7);
+}
+
+#content h2
+{
+    padding-left: 2vh;
+}
+
+#content p
+{
+    padding: 0 2vh 2vh;
+    margin: 0;
 }
 
 /* 4 ANIMATIONS */

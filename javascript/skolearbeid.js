@@ -6,9 +6,11 @@ fetch("../content/skolearbeid.json")
         {
             document.getElementById("content").innerHTML +=
                 "<div id='" + data.skolearbeid[i].title.replace(/\s/g, "") + "'>" +
-                "<img src='" + data.skolearbeid[i].image + "' alt='" + data.skolearbeid[i].title + "'>" +
-                "<h2>" + data.skolearbeid[i].title + "</h2>" +
-                "<p>" + data.skolearbeid[i].content + "</p>" +
+                    "<img src='" + data.skolearbeid[i].image + "' alt='" + data.skolearbeid[i].title + "'>" +
+                    "<div>" +
+                        "<h2>" + data.skolearbeid[i].title + "</h2>" +
+                        "<p>" + data.skolearbeid[i].content + "</p>" +
+                    "</div>" +
                 "</div>";
         }
     });
