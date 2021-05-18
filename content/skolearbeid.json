@@ -1,28 +1,28 @@
 {
   "skolearbeid": [
     {
-      "image": "",
+      "image": "content/skolearbeid/verstasjon.png",
       "subject": "Konseptutvikling og programmering + Teknologiforståelse",
       "title": "Værstasjon",
       "content": "Her skulle vi måle forskjellige værdata og laste det opp til en database.",
       "date": "26. apr. 2021"
     },
     {
-      "image": "",
+      "image": "content/skolearbeid/app.png",
       "subject": "Konseptutvikling og programmering",
       "title": "App",
       "content": "Vi skulle utvikle en app for en valgfri kunde.",
       "date": "26. mar. 2021"
     },
     {
-      "image": "",
+      "image": "content/skolearbeid/rpi.png",
       "subject": "Teknologiforståelse",
       "title": "Raspberry Pi",
       "content": "Her skulle vi sette opp og teste forskjellige ting med en Raspberry Pi minidatamaskin.",
       "date": "26. feb 2021"
     },
     {
-      "image": "",
+      "image": "content/skolearbeid/database.png",
       "subject": "Konseptutvikling og programmering",
       "title": "Database",
       "content": "Dette var en oppgave om å lage en database og kjøre den lokalt, og å kunne legge inn og hente ut informasjon fra den.",
@@ -43,7 +43,7 @@
       "date": "10. des. 2020"
     },
     {
-      "image": "",
+      "image": "content/skolearbeid/stream.png",
       "subject": "Konseptutvikling og programmering",
       "title": "Veldedighetsstream",
       "content": "Her skulle vi planlegge og gjennomføre en veldedighetsstream for å samle inn penger til Bring Children From Streets.",
