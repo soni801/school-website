@@ -298,7 +298,8 @@ img, br
     position: absolute;
     height: 25rem;
     z-index: -1;
-    left: -.1em;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .card-content
