@@ -304,6 +304,8 @@ img, br
 .card-content
 {
     background: linear-gradient(to top, rgb(var(--dark)), rgb(var(--dark), .7), rgba(var(--dark), 0));
+    transform: translate(0, calc(100% - 4rem));
+    transition: 300ms ease;
 }
 
 .card h2, .card p
@@ -329,19 +331,14 @@ img, br
     transform: scale(.8) translate(12rem, 0);
 }
 
-.card-left:hover
-{
-    transform: scale(.85) translate(-12rem, 0);
-}
-
 .card-center:hover
 {
     transform: scale(1.1);
 }
 
-.card-right:hover
+.card-center:hover .card-content
 {
-    transform: scale(.85) translate(12rem, 0);
+    transform: none;
 }
 
 /* 3.4 Content */
