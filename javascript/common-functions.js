@@ -1,5 +1,5 @@
 // Resize iframes on load
-window.onload = function ()
+/*window.onload = function ()
 {
     const iframes = document.getElementsByTagName("iframe");
 
@@ -7,10 +7,10 @@ window.onload = function ()
     {
         iframes[i].style.height = iframes[i].offsetWidth / 16 * 9 + "px";
     }
-};
+};*/
 
 // Resize iframes on window resize
-$(window).on('resize',function ()
+/*$(window).on('resize',function ()
 {
     const iframes = document.getElementsByTagName("iframe");
 
@@ -18,6 +18,6 @@ $(window).on('resize',function ()
     {
         iframes[i].style.height = iframes[i].offsetWidth / 16 * 9 + "px";
     }
-});
+});*/
 
 // TODO: Themes

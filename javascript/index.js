@@ -3,7 +3,7 @@ rearrange(cardFocus[0], 0);
 rearrange(cardFocus[1], 1);
 
 // Load preview cards
-fetch("../content/skolearbeid.json")
+fetch("../skole/skole.json")
     .then(response => response.json())
     .then(data =>
     {
@@ -15,7 +15,7 @@ fetch("../content/skolearbeid.json")
         }
     });
 
-fetch("../content/fritidsaktiviteter.json")
+fetch("../fritid/fritid.json")
     .then(response => response.json())
     .then(data =>
     {
