@@ -1,22 +1,22 @@
 {
   "fritidsaktiviteter": [
     {
-      "image": "content/fritidsaktiviteter/graphide.png",
+      "image": "assets/graphide.png?v=20210521",
       "title": "graphide studios",
       "content": "graphide studios er et lite programvareutviklingsstudio som jeg og noen venner laget."
     },
     {
-      "image": "content/fritidsaktiviteter/redsea.png",
+      "image": "assets/redsea.png?v=20210521",
       "title": "Redsea",
       "content": "Redsea Productions er et lite programvareutviklingsstudio som jeg og noen venner laget."
     },
     {
-      "image": "content/fritidsaktiviteter/linerider.png",
+      "image": "assets/linerider.png?v=20210521",
       "title": "Line Rider",
       "content": "Line Rider er et spill der man produserer videoer av en person som kjører på kjelke på linjer man selv har tegnet. Du kan finne mine Line Rider videoer på min YouTube-kanal."
     },
     {
-      "image": "content/fritidsaktiviteter/kubing.png",
+      "image": "assets/kubing.png?v=20210521",
       "title": "Kubing",
       "content": "Kubing går ut på å løse en Rubik's kube så fort som mulig. Min rekord er 12.89 sekunder."
     }
