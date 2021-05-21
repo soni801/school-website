@@ -1,4 +1,4 @@
-fetch("../content/skolearbeid.json")
+fetch("skole.json")
     .then(response => response.json())
     .then(data =>
     {

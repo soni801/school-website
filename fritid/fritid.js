@@ -1,4 +1,4 @@
-fetch("../content/fritidsaktiviteter.json")
+fetch("fritid.json")
     .then(response => response.json())
     .then(data =>
     {
