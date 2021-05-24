@@ -159,29 +159,29 @@ img, br
 #footer
 {
     width: 100vw;
+    display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
     padding: 0 1rem;
     text-shadow: rgba(var(--dark), .15) 0 0 1rem;
     user-select: none;
 }
 
+#footer div
+{
+    display: flex;
+    gap: .5rem;
+}
+
 #footer img
 {
-    position: relative;
-    top: 2px;
-    height: 1em;
-    filter: invert();
-}
-
-#footer p
-{
-    float: left;
-}
-
-#footer ul
-{
-    display: inline-block;
-    float: right;
+    max-height: 2rem;
+    min-height: 2rem;
+    max-width: 2rem;
+    min-width: 2rem;
+    padding: .5rem;
+    border-radius: 3rem;
+    background: rgba(var(--dark), .2);
 }
 
 /* 3 INDIVIDUAL SELECTORS */
