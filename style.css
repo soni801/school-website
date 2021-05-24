@@ -114,7 +114,8 @@ img, br
     align-items: center;
     width: 100%;
     user-select: none;
-    background: inherit;
+    background: rgba(var(--light), .7);
+    backdrop-filter: blur(2rem);
     position: fixed;
     top: 0;
     left: 0;
