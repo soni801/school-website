@@ -190,7 +190,7 @@ img, br
     background: linear-gradient(115deg, rgb(var(--accent-dark)), rgb(var(--accent-light)), rgb(var(--accent-dark)), rgb(var(--accent-light)));
     background-size: 400%;
     width: 38rem;
-    padding: 1rem;
+    padding: 1rem 1.2rem;
     border-radius: 1.5rem;
     display: flex;
     margin: 30vh 0;
@@ -200,12 +200,8 @@ img, br
     animation: welcome-card-bg 12s infinite linear;
     box-shadow: rgba(var(--dark), .5) 0 0 2rem;
     user-select: none;
-    transition: 300ms ease;
-}
-
-#welcome:hover
-{
-    transform: scale(1.07);
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
 }
 
 #welcome img
@@ -215,12 +211,14 @@ img, br
     border-radius: 1rem;
     margin-right: 1rem;
     box-shadow: rgba(var(--dark), .2) 0 0 1rem;
+    transform: translateZ(1rem);
 }
 
 #welcome p
 {
     margin: 0;
-    text-shadow: rgba(var(--dark), .2) 0 0 1rem;
+    text-shadow: rgba(var(--dark), .3) 0 0 1rem;
+    transform: translateZ(1rem);
 }
 
 #welcome.subpage
@@ -236,6 +234,11 @@ img, br
 #welcome.subpage:hover
 {
     transform: none;
+}
+
+#welcome .js-tilt-glare
+{
+    border-radius: 1.5rem;
 }
 
 /* 3.2 Body */

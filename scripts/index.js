@@ -1,3 +1,7 @@
+// Elements
+const welcome = document.querySelector("#welcome");
+
+// Preview cards
 let cardFocus = [1, 1];
 rearrange(cardFocus[0], 0);
 rearrange(cardFocus[1], 1);
@@ -58,3 +62,12 @@ function rearrange(card, collection)
         cards[0].classList.add("card-right");
     }
 }
+
+// Initialise tilt
+VanillaTilt.init(welcome, {
+    max: 4,
+    speed: 500,
+    scale: 1.06,
+    glare: true,
+    "max-glare": .25
+});
