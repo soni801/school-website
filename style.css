@@ -112,7 +112,10 @@ img, br
 {
     display: flex;
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    width: 100vw;
     user-select: none;
     background: rgba(var(--light), .7);
     backdrop-filter: blur(2rem);
@@ -125,15 +128,15 @@ img, br
     z-index: 4;
 }
 
-#header h1
+#header div
 {
-    margin-left: 30px;
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    gap: 6rem;
 }
 
 #header h2
 {
-    margin-left: 80px;
     position: relative;
 }
 
@@ -154,6 +157,12 @@ img, br
 #header h2:hover::after
 {
     transform: scaleX(1);
+}
+
+#theme-toggle
+{
+    height: 3rem;
+    cursor: pointer;
 }
 
 /* 2.2 Footer */
