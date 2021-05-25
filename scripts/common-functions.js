@@ -29,10 +29,10 @@ function loadTheme(theme)
 {
     const html = document.querySelector("html");
     const style = getComputedStyle(html);
+    const button = document.querySelector("#theme-toggle");
 
     const dark = style.getPropertyValue("--dark-mode");
     const light = style.getPropertyValue("--light");
-
     const preserveDark = style.getPropertyValue("--preserve-dark");
     const preserveLight = style.getPropertyValue("--preserve-light");
 
@@ -41,11 +41,13 @@ function loadTheme(theme)
         case "dark":
             html.style.setProperty("--dark", light);
             html.style.setProperty("--light", dark);
+            button.src = "/assets/icons/sun.svg";
             localStorage.setItem("theme", "dark");
             break;
         case "light":
             html.style.setProperty("--dark", preserveDark);
             html.style.setProperty("--light", preserveLight);
+            button.src = "/assets/icons/moon.svg";
             localStorage.setItem("theme", "light");
     }
 }
