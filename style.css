@@ -47,6 +47,7 @@ body
     position: relative;
     top: 100px;
     overflow-x: hidden;
+    transition: 500ms ease;
 }
 
 /* 1.2 Tag selectors */
@@ -130,6 +131,7 @@ img, br
     height: 100px;
     text-shadow: rgba(var(--preserve-dark), .1) 0 0 .5rem;
     z-index: 4;
+    transition: 500ms ease;
 }
 
 #header div
