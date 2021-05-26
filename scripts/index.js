@@ -6,6 +6,12 @@ let cardFocus = [1, 1];
 rearrange(cardFocus[0], 0);
 rearrange(cardFocus[1], 1);
 
+// Load buttons
+$("#school-button-left").load("/assets/icons/chevron-left.svg");
+$("#school-button-right").load("/assets/icons/chevron-right.svg");
+$("#other-button-left").load("/assets/icons/chevron-left.svg");
+$("#other-button-right").load("/assets/icons/chevron-right.svg");
+
 // Load preview cards
 fetch("../skole/skole.json")
     .then(response => response.json())
