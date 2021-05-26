@@ -7,13 +7,14 @@
     2 Recurring selectors
         2.1 Header
         2.2 Footer
-    3 Individual selectors
+    3 Section selectors
         3.1 Welcome card
         3.2 Body
         3.3 Projects preview
         3.4 Content
-    4 Animations
-        4.1 Welcome card
+    4 Singular selectors
+    5 Animations
+        5.1 Welcome card
  */
 
 /* 1 BROAD SELECTORS */
@@ -196,7 +197,7 @@ img, br
     padding: .6rem;
     height: 2rem;
     border-radius: 50%;
-    background: rgba(var(--dark), .2);
+    background: rgb(var(--dark));
 }
 
 #footer span
@@ -207,7 +208,12 @@ img, br
     width: 2rem;
 }
 
-/* 3 INDIVIDUAL SELECTORS */
+#footer g
+{
+    fill: rgb(var(--light));
+}
+
+/* 3 SECTION SELECTORS */
 /* 3.1 Welcome card */
 #welcome
 {
@@ -431,8 +437,14 @@ img, br
     padding-bottom: 0;
 }
 
-/* 4 ANIMATIONS */
-/* 4.1 Welcome card */
+/* 4 SINGULAR SELECTORS */
+#cutout
+{
+    fill: rgb(var(--dark));
+}
+
+/* 5 ANIMATIONS */
+/* 5.1 Welcome card */
 @keyframes welcome-card-bg
 {
     0%
