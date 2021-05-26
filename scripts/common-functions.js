@@ -3,17 +3,14 @@ $("#header-pre").load("/sections/header.html");
 $("#footer-pre").load("/sections/footer.html");
 
 // Load theme on page launch
-setTimeout(function ()
+try
 {
-    try
-    {
-        loadTheme(localStorage.getItem("theme"));
-    }
-    catch (e)
-    {
-        loadTheme("light");
-    }
-}, 390);
+    loadTheme(localStorage.getItem("theme"));
+}
+catch (e)
+{
+    loadTheme("light");
+}
 
 // Toggle website theme
 function toggleTheme()
@@ -39,18 +36,23 @@ function loadTheme(theme)
     const preserveDark = style.getPropertyValue("--preserve-dark");
     const preserveLight = style.getPropertyValue("--preserve-light");
 
+    localStorage.setItem("theme", theme);
     switch (theme)
     {
         case "dark":
             html.style.setProperty("--dark", light);
             html.style.setProperty("--light", dark);
-            button.src = "/assets/icons/sun.svg";
-            localStorage.setItem("theme", "dark");
+            setTimeout(function ()
+            {
+                button.src = "/assets/icons/sun.svg";
+            }, 400);
             break;
         case "light":
             html.style.setProperty("--dark", preserveDark);
             html.style.setProperty("--light", preserveLight);
-            button.src = "/assets/icons/moon.svg";
-            localStorage.setItem("theme", "light");
+            setTimeout(function ()
+            {
+                button.src = "/assets/icons/moon.svg";
+            }, 400);
     }
 }
