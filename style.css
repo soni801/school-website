@@ -48,7 +48,6 @@ body
     position: relative;
     top: 100px;
     overflow-x: hidden;
-    transition: 500ms ease;
 }
 
 /* 1.2 Tag selectors */
@@ -132,7 +131,6 @@ img, br
     height: 100px;
     text-shadow: rgba(var(--preserve-dark), .1) 0 0 .5rem;
     z-index: 4;
-    transition: 500ms ease;
 }
 
 #header div
@@ -172,6 +170,7 @@ img, br
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+    fill: rgb(var(--dark));
 }
 
 /* 2.2 Footer */
@@ -206,10 +205,6 @@ img, br
     justify-content: center;
     height: 2rem;
     width: 2rem;
-}
-
-#footer g
-{
     fill: rgb(var(--light));
 }
 

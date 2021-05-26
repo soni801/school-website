@@ -60,4 +60,10 @@ function loadTheme(theme)
                 $("#theme-toggle").load("/assets/icons/moon.svg");
             }, 400);
     }
+
+    setTimeout(function ()
+    {
+        document.querySelector("body").style.transition = "color 500ms ease, background 500ms ease";
+        document.querySelector("#header").style.transition = "color 500ms ease, background 500ms ease";
+    }, 400);
 }
