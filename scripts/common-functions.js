@@ -3,14 +3,17 @@ $("#header-pre").load("/sections/header.html");
 $("#footer-pre").load("/sections/footer.html");
 
 // Load theme on page launch
-try
+setTimeout(function ()
 {
-    loadTheme(localStorage.getItem("theme"));
-}
-catch (e)
-{
-    loadTheme("light");
-}
+    try
+    {
+        loadTheme(localStorage.getItem("theme"));
+    }
+    catch (e)
+    {
+        loadTheme("light");
+    }
+}, 390);
 
 // Toggle website theme
 function toggleTheme()
