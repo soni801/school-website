@@ -2,6 +2,7 @@
 $("#header-pre").load("/sections/header.html");
 $("#footer-pre").load("/sections/footer.html", function ()
 {
+    $("#yessness-logo-pre").load("/assets/icons/brands/yessness.svg");
     $("#github-logo-pre").load("/assets/icons/brands/github.svg");
     $("#twitch-logo-pre").load("/assets/icons/brands/twitch.svg");
     $("#twitter-logo-pre").load("/assets/icons/brands/twitter.svg");
