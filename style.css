@@ -167,6 +167,8 @@ img, br
 
 #theme-toggle
 {
+    display: flex;
+    width: 3rem;
     height: 3rem;
     cursor: pointer;
 }
@@ -197,8 +199,10 @@ img, br
     background: rgba(var(--dark), .2);
 }
 
-#footer img
+#footer span
 {
+    display: flex;
+    justify-content: center;
     height: 2rem;
     width: 2rem;
 }

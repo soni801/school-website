@@ -1,6 +1,12 @@
 // Load sections into document
 $("#header-pre").load("/sections/header.html");
-$("#footer-pre").load("/sections/footer.html");
+$("#footer-pre").load("/sections/footer.html", function ()
+{
+    $("#github-logo-pre").load("/assets/icons/brands/github.svg");
+    $("#twitch-logo-pre").load("/assets/icons/brands/twitch.svg");
+    $("#twitter-logo-pre").load("/assets/icons/brands/twitter.svg");
+    $("#youtube-logo-pre").load("/assets/icons/brands/youtube.svg");
+});
 
 // Load theme on page launch
 try
@@ -29,7 +35,6 @@ function loadTheme(theme)
 {
     const html = document.querySelector("html");
     const style = getComputedStyle(html);
-    const button = document.querySelector("#theme-toggle");
 
     const dark = style.getPropertyValue("--dark-mode");
     const light = style.getPropertyValue("--light");
@@ -44,7 +49,7 @@ function loadTheme(theme)
             html.style.setProperty("--light", dark);
             setTimeout(function ()
             {
-                button.src = "/assets/icons/sun.svg";
+                $("#theme-toggle").load("/assets/icons/sun.svg");
             }, 400);
             break;
         case "light":
@@ -52,7 +57,7 @@ function loadTheme(theme)
             html.style.setProperty("--light", preserveLight);
             setTimeout(function ()
             {
-                button.src = "/assets/icons/moon.svg";
+                $("#theme-toggle").load("/assets/icons/moon.svg");
             }, 400);
     }
 }
