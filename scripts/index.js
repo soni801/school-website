@@ -2,9 +2,13 @@
 const welcome = document.querySelector("#welcome");
 
 // Preview cards
+loadCards();
 let cardFocus = [1, 1];
-rearrange(cardFocus[0], 0);
-rearrange(cardFocus[1], 1);
+setTimeout(function ()
+{
+    rearrange(cardFocus[0], 0);
+    rearrange(cardFocus[1], 1);
+}, 500);
 
 // Load buttons
 $("#school-button-left").load("/assets/icons/chevron-left.svg");
@@ -12,30 +16,52 @@ $("#school-button-right").load("/assets/icons/chevron-right.svg");
 $("#other-button-left").load("/assets/icons/chevron-left.svg");
 $("#other-button-right").load("/assets/icons/chevron-right.svg");
 
-// Load preview cards
-fetch("../skole/skole.json")
-    .then(response => response.json())
-    .then(data =>
-    {
-        for (let i = 0; i < 3; i++)
-        {
-            document.querySelector("#school-card-" + (i + 1) + " .card-content h2").innerHTML = data.skolearbeid[i].title;
-            document.querySelector("#school-card-" + (i + 1) + " .card-content p").innerHTML = data.skolearbeid[i].content;
-            document.querySelector("#school-card-" + (i + 1) + " .card-image").src = data.skolearbeid[i].image;
-        }
-    });
+// Initialise tilt
+VanillaTilt.init(welcome, {
+    max: 4,
+    speed: 500,
+    scale: 1.06,
+    glare: true,
+    "max-glare": .25
+});
 
-fetch("../fritid/fritid.json")
-    .then(response => response.json())
-    .then(data =>
-    {
-        for (let i = 0; i < 3; i++)
+// Load preview cards
+function loadCards()
+{
+    fetch("../skole/skole.json")
+        .then(response => response.json())
+        .then(data =>
         {
-            document.querySelector("#other-card-" + (i + 1) + " .card-content h2").innerHTML = data.fritidsaktiviteter[i].title;
-            document.querySelector("#other-card-" + (i + 1) + " .card-content p").innerHTML = data.fritidsaktiviteter[i].content;
-            document.querySelector("#other-card-" + (i + 1) + " .card-image").src = data.fritidsaktiviteter[i].image;
-        }
-    });
+            for (let i = 0; i < 3; i++)
+            {
+                document.querySelector("#school-projects-cards").innerHTML +=
+                    "<div class='card'>" +
+                        "<img class='card-image' src='" + data.skolearbeid[i].image + "' alt='Card Preview'>" +
+                        "<div class='card-content'>" +
+                            "<h2>" + data.skolearbeid[i].title + "</h2>" +
+                            "<p>" + data.skolearbeid[i].content + "</p>" +
+                        "</div>" +
+                    "</div>";
+            }
+        });
+
+    fetch("../fritid/fritid.json")
+        .then(response => response.json())
+        .then(data =>
+        {
+            for (let i = 0; i < 3; i++)
+            {
+                document.querySelector("#other-projects-cards").innerHTML +=
+                    "<div class='card'>" +
+                        "<img class='card-image' src='" + data.fritidsaktiviteter[i].image + "' alt='Card Preview'>" +
+                        "<div class='card-content'>" +
+                            "<h2>" + data.fritidsaktiviteter[i].title + "</h2>" +
+                            "<p>" + data.fritidsaktiviteter[i].content + "</p>" +
+                        "</div>" +
+                    "</div>";
+            }
+        });
+}
 
 // Rearrange preview cards
 function rearrange(card, collection)
@@ -68,12 +94,3 @@ function rearrange(card, collection)
         cards[0].classList.add("card-right");
     }
 }
-
-// Initialise tilt
-VanillaTilt.init(welcome, {
-    max: 4,
-    speed: 500,
-    scale: 1.06,
-    glare: true,
-    "max-glare": .25
-});
