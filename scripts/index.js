@@ -81,6 +81,7 @@ function loadCards()
                         "</div>" +
                     "</div>";
             }
+            $(".fullscreen-close").load("/assets/icons/cross.svg");
         });
 }
 
