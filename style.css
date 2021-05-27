@@ -154,13 +154,13 @@ img, br
     fill: rgb(var(--dark));
 }
 
-#header :focus
+#header :focus-visible
 {
     outline: none;
     position: relative;
 }
 
-#header :focus::before
+#header :focus-visible::before
 {
     content: "";
     position: absolute;
@@ -270,13 +270,13 @@ img, br
     border-radius: 1.5rem;
 }
 
-#welcome:focus
+#welcome:focus-visible
 {
     outline: none;
     position: relative;
 }
 
-#welcome:focus::before
+#welcome:focus-visible::before
 {
     content: "";
     position: absolute;
