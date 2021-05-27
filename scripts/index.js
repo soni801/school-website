@@ -41,8 +41,19 @@ function loadCards()
                             "<h2>" + data.skolearbeid[i].title + "</h2>" +
                             "<p>" + data.skolearbeid[i].content + "</p>" +
                         "</div>" +
+                    "</div>" +
+                    "<div class='fullscreen'>" +
+                        "<div class='fullscreen-content'>" +
+                            "<img src='" + data.skolearbeid[i].image + "' alt='Image'>" +
+                            "<div>" +
+                                "<h2>" + data.skolearbeid[i].title + "</h2>" +
+                                "<p>" + data.skolearbeid[i].content + "</p>" +
+                            "</div>" +
+                            "<span class='fullscreen-close' onclick='closeFullscreen(this)'></span>" +
+                        "</div>" +
                     "</div>";
             }
+            $(".fullscreen-close").load("/assets/icons/cross.svg");
         });
 
     fetch("../fritid/fritid.json")
@@ -57,6 +68,16 @@ function loadCards()
                         "<div class='card-content'>" +
                             "<h2>" + data.fritidsaktiviteter[i].title + "</h2>" +
                             "<p>" + data.fritidsaktiviteter[i].content + "</p>" +
+                        "</div>" +
+                    "</div>" +
+                    "<div class='fullscreen'>" +
+                        "<div class='fullscreen-content'>" +
+                            "<img src='" + data.fritidsaktiviteter[i].image + "' alt='Image'>" +
+                            "<div>" +
+                                "<h2>" + data.fritidsaktiviteter[i].title + "</h2>" +
+                                "<p>" + data.fritidsaktiviteter[i].content + "</p>" +
+                            "</div>" +
+                            "<span class='fullscreen-close' onclick='closeFullscreen(this)'></span>" +
                         "</div>" +
                     "</div>";
             }
@@ -76,8 +97,11 @@ function rearrange(card, collection)
         cards[i].classList.remove("card-left");
         cards[i].classList.remove("card-center");
         cards[i].classList.remove("card-right");
+        cards[i].removeAttribute("onclick");
     }
+
     cards[card].classList.add("card-center");
+
     if(card === 0)
     {
         cards[2].classList.add("card-left");
@@ -93,4 +117,18 @@ function rearrange(card, collection)
         cards[1].classList.add("card-left");
         cards[0].classList.add("card-right");
     }
+
+    cards[card].setAttribute("onclick", "openFullscreen(this)");
+}
+
+// Open fullscreen view
+function openFullscreen(element)
+{
+    element.nextSibling.style.display = "flex";
+}
+
+// Close fullscreen view
+function closeFullscreen(element)
+{
+    element.parentNode.parentNode.style.display = "none";
 }

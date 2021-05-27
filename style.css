@@ -11,6 +11,8 @@
         3.1 Welcome card
         3.2 Body
         3.3 Projects preview
+            3.3.1 Cards
+            3.3.2 Full screen
         3.4 Content
     4 Singular selectors
     5 Animations
@@ -258,6 +260,7 @@ img, br
 }
 
 /* 3.3 Projects preview */
+/* 3.3.1 Cards */
 #projects
 {
     text-align: center;
@@ -332,6 +335,7 @@ img, br
 {
     z-index: 3;
     filter: none;
+    cursor: pointer;
 }
 
 .card-right
@@ -365,6 +369,68 @@ img, br
 {
     transform: scale(1.13);
     fill: rgba(var(--dark), .8);
+}
+
+/* 3.3.2 Full screen */
+.fullscreen
+{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(var(--dark), .5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    color: rgba(var(--light), .9);
+    text-align: left;
+}
+
+.fullscreen p
+{
+    margin: 0;
+}
+
+.fullscreen-content
+{
+    position: relative;
+    width: 70vw;
+    height: 80vh;
+    overflow: hidden;
+    border-radius: 3rem;
+    box-shadow: rgba(var(--preserve-dark), .3) 0 0 2rem;
+}
+
+.fullscreen-content img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(.7);
+}
+
+.fullscreen-content div
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+}
+
+.fullscreen-close > *
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    stroke: rgb(var(--dark));
+    padding: 2rem;
 }
 
 /* 3.4 Content */
