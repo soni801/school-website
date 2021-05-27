@@ -103,15 +103,16 @@ img, br
     padding: 0 2rem;
     width: 100vw;
     user-select: none;
-    background: rgba(var(--light), .7);
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter: blur(2rem);
+    background: rgba(var(--light), .65);
+    backdrop-filter: blur(.9rem);
+    -webkit-backdrop-filter: blur(.9rem);
     position: fixed;
     top: 0;
     left: 0;
     height: 100px;
     text-shadow: rgba(var(--preserve-dark), .1) 0 0 .5rem;
     z-index: 4;
+    /* Do not set transitions here, they are set in common-functions.js when page loads */
 }
 
 #header div

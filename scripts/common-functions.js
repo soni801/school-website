@@ -19,6 +19,15 @@ catch (e)
     loadTheme("light");
 }
 
+// Scroll callback
+function scroll()
+{
+    if (pageYOffset > 0) document.querySelector("#header").style.boxShadow = "rgba(var(--preserve-dark), .2) 0 0 2rem";
+    else document.querySelector("#header").style.boxShadow = "none";
+}
+
+window.onscroll = scroll;
+
 // Toggle website theme
 function toggleTheme()
 {
@@ -32,6 +41,7 @@ function toggleTheme()
     else loadTheme("light");
 }
 
+// Load website theme
 function loadTheme(theme)
 {
     const html = document.querySelector("html");
@@ -65,6 +75,8 @@ function loadTheme(theme)
     setTimeout(function ()
     {
         document.querySelector("body").style.transition = "color 500ms ease, background 500ms ease";
-        document.querySelector("#header").style.transition = "color 500ms ease, background 500ms ease";
+        document.querySelector("#header").style.transition = "color 500ms ease, background 500ms ease, box-shadow 200ms ease";
+
+        if (pageYOffset > 0) scroll();
     }, 400);
 }
