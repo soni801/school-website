@@ -126,10 +126,20 @@ function rearrange(card, collection)
 function openFullscreen(element)
 {
     element.nextSibling.style.display = "flex";
+    setTimeout(function ()
+    {
+        element.nextSibling.style.opacity = "1";
+        element.nextSibling.style.transform = "none";
+    }, 10);
 }
 
 // Close fullscreen view
 function closeFullscreen(element)
 {
-    element.parentNode.parentNode.style.display = "none";
+    element.parentNode.parentNode.style.opacity = "0";
+    element.parentNode.parentNode.style.transform = "scale(1.2)";
+    setTimeout(function ()
+    {
+        element.parentNode.parentNode.style.display = "none";
+    }, 500);
 }
