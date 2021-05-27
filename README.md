@@ -4,7 +4,7 @@
 
 This is a website built for school purposes; to display my school projects along with some other things. It also acts as a personal portfolio.
 
-This website is part of the [Yessness](https://yessness.com/) domain, owned by graphide studios.
+This website is part of the [Yessness](https://yessness.com/) domain, owned by [graphide studios](https://github.com/graphide).
 
 ### Designs
 
