@@ -38,42 +38,44 @@
         <meta name="msapplication-config" content="assets/favicon/browserconfig.xml?v=20210224">
         <meta name="theme-color" content="#3ba3a1">
     </head>
-    <body>
+    <body data-barba="wrapper">
         <!-- Header -->
         <span id="header-pre"></span>
 
-        <!-- Title -->
-        <a href="#body" id="welcome">
-            <img src="assets/portrait.png" alt="Soni Portrait">
-            <p>Hei! Jeg er Samuel, og jeg går første år på Informasjonsteknologi og medieproduksjon ved Amalie Skram VGS.</p>
-        </a>
+        <div id="page" data-barba="container" data-barba-namespace="home">
+            <!-- Title -->
+            <a href="#body" id="welcome">
+                <img src="assets/portrait.png" alt="Soni Portrait">
+                <p>Hei! Jeg er Samuel, og jeg går første år på Informasjonsteknologi og medieproduksjon ved Amalie Skram VGS.</p>
+            </a>
 
-        <!-- Body -->
-        <div id="body">
-            <h1>Om meg</h1>
-            <p>Hei! Jeg heter Samuel, og jeg går første år på<br>
-                Informasjonsteknologi og medieproduksjon ved Amalie Skram VGS.</p>
-            <p>Jeg ble introdusert til programmering i 2016 og holdt på med<br>
-                blokkprogrammering i noen måneder før jeg gikk over til webutvikling.<br>
-                Etter litt tid lærte jeg også Java. Nå kan jeg rundt 10 programmeringsspråk.</p>
-            <p>Dette er en nettside som vi ble bedt om å lage på starten av skoleåret.<br>
-                Den skal fungere som en digital arbeidsbok der jeg viser frem<br>
-                hva jeg har jobbet med gjennom året, men også litt av hva jeg jobber med på fritiden.</p>
-        </div>
-
-        <!-- Projects preview -->
-        <div id="projects">
-            <h1>Nylig skolearbeid</h1>
-            <div id="school-projects">
-                <span id="school-button-left" onclick="rearrange(cardFocus[0] - 1, 0)"></span>
-                <div id="school-projects-cards"></div>
-                <span id="school-button-right" onclick="rearrange(cardFocus[0] + 1, 0)"></span>
+            <!-- Body -->
+            <div id="body">
+                <h1>Om meg</h1>
+                <p>Hei! Jeg heter Samuel, og jeg går første år på<br>
+                    Informasjonsteknologi og medieproduksjon ved Amalie Skram VGS.</p>
+                <p>Jeg ble introdusert til programmering i 2016 og holdt på med<br>
+                    blokkprogrammering i noen måneder før jeg gikk over til webutvikling.<br>
+                    Etter litt tid lærte jeg også Java. Nå kan jeg rundt 10 programmeringsspråk.</p>
+                <p>Dette er en nettside som vi ble bedt om å lage på starten av skoleåret.<br>
+                    Den skal fungere som en digital arbeidsbok der jeg viser frem<br>
+                    hva jeg har jobbet med gjennom året, men også litt av hva jeg jobber med på fritiden.</p>
             </div>
-            <h1>Nylige fritidsaktiviteter</h1>
-            <div id="other-projects">
-                <span id="other-button-left" onclick="rearrange(cardFocus[1] - 1, 1)"></span>
-                <div id="other-projects-cards"></div>
-                <span id="other-button-right" onclick="rearrange(cardFocus[1] + 1, 1)"></span>
+
+            <!-- Projects preview -->
+            <div id="projects">
+                <h1>Nylig skolearbeid</h1>
+                <div id="school-projects">
+                    <span id="school-button-left" onclick="rearrange(cardFocus[0] - 1, 0)"></span>
+                    <div id="school-projects-cards"></div>
+                    <span id="school-button-right" onclick="rearrange(cardFocus[0] + 1, 0)"></span>
+                </div>
+                <h1>Nylige fritidsaktiviteter</h1>
+                <div id="other-projects">
+                    <span id="other-button-left" onclick="rearrange(cardFocus[1] - 1, 1)"></span>
+                    <div id="other-projects-cards"></div>
+                    <span id="other-button-right" onclick="rearrange(cardFocus[1] + 1, 1)"></span>
+                </div>
             </div>
         </div>
 
@@ -83,6 +85,8 @@
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="scripts/vanilla-tilt.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+        <script src="https://unpkg.com/@barba/core"></script>
         <script src="scripts/common-functions.js"></script>
         <script src="scripts/index.js"></script>
     </body>
