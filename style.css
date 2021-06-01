@@ -487,41 +487,31 @@ img, br
 /* 3.4 Content */
 #content
 {
+    width: 100vw;
     margin-top: 10rem;
     color: rgb(var(--light));
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-#content > div
-{
-    position: relative;
-    width: 70vw;
-    height: 80vh;
-    overflow: hidden;
-    border-radius: .5rem;
-    box-shadow: rgba(var(--preserve-dark), .6) 0 0 1rem;
-}
-
-#content .content-text
-{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background: linear-gradient(to top, rgba(var(--dark), .7), rgba(var(--dark), 0));
-    text-shadow: rgba(var(--preserve-dark), .3) 0 0 .4rem;
+    gap: 80vh;
 }
 
 #content img
 {
-    position: absolute;
+    position: fixed;
+    top: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
     filter: brightness(.7);
+    opacity: 0;
+}
+
+#content .content-text
+{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    text-shadow: rgba(var(--preserve-dark), .3) 0 0 .4rem;
 }
 
 #content h2
