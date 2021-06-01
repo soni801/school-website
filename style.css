@@ -504,6 +504,7 @@ img, br
     z-index: -1;
     filter: brightness(.7);
     opacity: 0;
+    transition: 500ms ease;
 }
 
 #content .content-text

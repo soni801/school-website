@@ -1,3 +1,4 @@
+//Load content
 fetch("skole.json")
     .then(response => response.json())
     .then(data =>
@@ -16,3 +17,21 @@ fetch("skole.json")
                 "</div>";
         }
     });
+
+// Change background image on page scroll
+let scrollMemory;
+document.onscroll = function ()
+{
+    const scrollDistance = Math.round((pageYOffset + 400) / 1000) -1;
+    if (scrollDistance === scrollMemory) return;
+    else scrollMemory = scrollDistance;
+
+    const sections = document.querySelectorAll(".content-text");
+
+    for (let i = 0; i < sections.length; i++)
+    {
+        sections[i].previousSibling.style.opacity = "0";
+    }
+
+    sections[scrollDistance].previousSibling.style.opacity = "1";
+}
