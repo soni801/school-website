@@ -212,6 +212,13 @@ img, br
     height: 2rem;
     width: 2rem;
     fill: rgb(var(--light));
+    transition: 200ms ease;
+}
+
+#footer span:hover
+{
+    fill: rgba(var(--light), .5);
+    transform: scale(.9);
 }
 
 /* 3 SECTION SELECTORS */
