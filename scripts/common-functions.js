@@ -1,5 +1,8 @@
 // Load sections into document
-$("#header-pre").load("/sections/header.html");
+$("#header-pre").load("/sections/header.html", function ()
+{
+    launchLoad();
+});
 $("#footer-pre").load("/sections/footer.html", function ()
 {
     $("#yessness-logo-pre").load("/assets/icons/brands/yessness.svg");
@@ -10,14 +13,19 @@ $("#footer-pre").load("/sections/footer.html", function ()
 });
 
 // Load theme on page launch
-try
+function launchLoad()
 {
-    loadTheme(localStorage.getItem("theme"));
+    try
+    {
+        loadTheme(localStorage.getItem("theme"));
+    }
+    catch (e)
+    {
+        loadTheme("light");
+    }
 }
-catch (e)
-{
-    loadTheme("light");
-}
+
+launchLoad();
 
 // Scroll callback
 function scroll()
@@ -58,18 +66,12 @@ function loadTheme(theme)
         case "dark":
             html.style.setProperty("--dark", light);
             html.style.setProperty("--light", dark);
-            setTimeout(function ()
-            {
-                $("#theme-toggle").load("/assets/icons/sun.svg");
-            }, 400);
+            $("#theme-toggle").load("/assets/icons/sun.svg");
             break;
         case "light":
             html.style.setProperty("--dark", preserveDark);
             html.style.setProperty("--light", preserveLight);
-            setTimeout(function ()
-            {
-                $("#theme-toggle").load("/assets/icons/moon.svg");
-            }, 400);
+            $("#theme-toggle").load("/assets/icons/moon.svg");
     }
 
     setTimeout(function ()
