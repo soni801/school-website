@@ -5,7 +5,7 @@ fetch("fritid.json")
         for (let i = 0; i < data.fritidsaktiviteter.length; i++)
         {
             document.getElementById("content").innerHTML +=
-                "<div id='" + data.fritidsaktiviteter[i].title.replace(/\s/g, "") + "'>" +
+                "<div id='" + data.fritidsaktiviteter[i].title.replace(/\s/g, "-").toLowerCase() + "'>" +
                     "<img src='" + data.fritidsaktiviteter[i].image + "' alt='" + data.fritidsaktiviteter[i].title + "'>" +
                     "<div class='content-text'>" +
                         "<h2>" + data.fritidsaktiviteter[i].title + "</h2>" +

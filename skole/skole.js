@@ -5,7 +5,7 @@ fetch("skole.json")
         for (let i = 0; i < data.skolearbeid.length; i++)
         {
             document.getElementById("content").innerHTML +=
-                "<div id='" + data.skolearbeid[i].title.replace(/\s/g, "") + "'>" +
+                "<div id='" + data.skolearbeid[i].title.replace(/\s/g, "-").toLowerCase() + "'>" +
                     "<img src='" + data.skolearbeid[i].image + "' alt='" + data.skolearbeid[i].title + "'>" +
                     "<div class='content-text'>" +
                         "<p class='subject'>" + data.skolearbeid[i].subject + "</p>" +
