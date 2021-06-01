@@ -136,14 +136,15 @@ img, br
     height: 5px;
     width: 100%;
     background: rgb(var(--accent-dark));
-    transition: ease 250ms;
-    transform-origin: left;
+    transition: transform ease 250ms;
+    transform-origin: right;
     transform: scaleX(0);
 }
 
 #header h2:hover::after
 {
     transform: scaleX(1);
+    transform-origin: left;
 }
 
 #theme-toggle
