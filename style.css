@@ -501,7 +501,7 @@ img, br
 {
     width: 100vw;
     margin-top: 10rem;
-    color: rgb(var(--light));
+    color: rgb(var(--preserve-light));
     display: flex;
     flex-direction: column;
     gap: 80vh;
@@ -540,12 +540,12 @@ img, br
 
 #content .date
 {
-    color: rgba(var(--light), .5);
+    color: rgba(var(--preserve-light), .5);
 }
 
 #content .subject
 {
-    color: rgba(var(--light), .5);
+    color: rgba(var(--preserve-light), .5);
     padding-bottom: 0;
 }
 
