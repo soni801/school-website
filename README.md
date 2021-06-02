@@ -4,7 +4,7 @@
 
 This is a website built for school purposes; to display my school projects along with some other things. It also acts as a personal portfolio.
 
-This website is part of the [Yessness](https://yessness.com/) domain, owned by [graphide studios](https://github.com/graphide).
+The website is part of the [Yessness](https://yessness.com/) domain, owned by [graphide studios](https://github.com/graphide).
 
 ### Designs
 
@@ -24,8 +24,10 @@ Rest of code is solely my own, but can be forked and used as long as proper cred
 
 ### Branding:
 
-He color scheme used on the website is as following:
+The color scheme used on the website is as following:
 
-Light                          | Dark                          | Accent<br>Light                          | Accent<br>Dark
+Alice Blue                     | Charcoal                      | Sunglow                               | Mango Tango
 :-----------------------------:|:-----------------------------:|:-------------------------------------:|:----------------------------------:
 ![](./assets/colors/light.png) | ![](./assets/colors/dark.png) | ![](./assets/colors/accent-light.png) |![](./assets/colors/accent-dark.png)
+Light                          | Dark                          | Accent Light                          | Accent Dark
+rgb(226, 235, 243)             | rgb(47, 60, 76)               | rgb(243, 115, 53)                     | rgb(253, 200, 48)
