@@ -161,6 +161,13 @@ img, br
     height: 3rem;
     cursor: pointer;
     fill: rgb(var(--dark));
+    transition: 200ms ease;
+}
+
+#theme-toggle:hover
+{
+    transform: scale(1.2);
+    fill: rgba(var(--dark), .8);
 }
 
 #header :focus-visible
@@ -429,7 +436,8 @@ img, br
 #projects span:hover
 {
     transform: scale(1.13);
-    fill: rgba(var(--dark), .8);
+    background: rgba(var(--dark), .2);
+    fill: rgba(var(--dark), .9);
 }
 
 /* 3.3.2 Full screen */
