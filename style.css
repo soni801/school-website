@@ -255,6 +255,7 @@ img, br
     margin-right: 1rem;
     box-shadow: rgba(var(--preserve-dark), .2) 0 0 1rem;
     transform: translateZ(1rem);
+    filter: brightness(.95);
 }
 
 #welcome p
