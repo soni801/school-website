@@ -15,8 +15,6 @@
             3.3.2 Full screen
         3.4 Content
     4 Singular selectors
-    5 Animations
-        5.1 Welcome card
  */
 
 /* 1 BROAD SELECTORS */
@@ -34,6 +32,8 @@ html
 
     --preserve-light: 226, 235, 243;
     --preserve-dark: 47, 60, 76;
+
+    --gradient: linear-gradient(to left, rgb(var(--accent-light)), rgb(var(--accent-dark)));
 }
 
 body
@@ -126,6 +126,14 @@ img, br
     position: relative;
 }
 
+#header h2:hover
+{
+    color: transparent;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    transition: 300ms ease;
+}
+
 #header h2::after
 {
     position: absolute;
@@ -134,7 +142,7 @@ img, br
     content: "";
     height: 5px;
     width: 100%;
-    background: rgb(var(--accent-dark));
+    background: var(--gradient);
     transition: transform ease 250ms;
     transform-origin: right;
     transform: scaleX(0);
@@ -172,7 +180,7 @@ img, br
     transform: translate(-5px, -50%);
     padding: 1em;
     margin-left: -1em;
-    border: 5px solid rgb(var(--accent-light));
+    border: 5px solid rgb(var(--accent-dark));
     border-radius: 4em;
     box-shadow: rgba(var(--preserve-dark), .2) 0 0 .4rem,
                 rgba(var(--preserve-dark), .2) 0 0 .4rem inset;
@@ -224,8 +232,7 @@ img, br
 /* 3.1 Welcome card */
 #welcome
 {
-    background: linear-gradient(115deg, rgb(var(--accent-dark)), rgb(var(--accent-light)), rgb(var(--accent-dark)), rgb(var(--accent-light)));
-    background-size: 400%;
+    background: var(--gradient);
     width: 38rem;
     padding: 1rem 1.2rem;
     border-radius: 1.5rem;
@@ -234,7 +241,6 @@ img, br
     color: rgba(var(--preserve-light), .95);
     font-size: 25px;
     font-weight: 700;
-    animation: welcome-card-bg 12s infinite linear;
     box-shadow: rgba(var(--preserve-dark), .5) 0 0 2rem;
     user-select: none;
     transform: perspective(1000px);
@@ -547,19 +553,4 @@ img, br
 #cutout
 {
     fill: rgb(var(--dark));
-}
-
-/* 5 ANIMATIONS */
-/* 5.1 Welcome card */
-@keyframes welcome-card-bg
-{
-    0%
-    {
-        background-position: 0;
-    }
-
-    100%
-    {
-        background-position: 90%;
-    }
 }
