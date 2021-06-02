@@ -27,14 +27,13 @@ html
 {
     scroll-behavior: smooth; /* Smooth scrolling on supported browsers */
 
-    --light: 249, 245, 255;
-    --dark: 30, 21, 42;
-    --accent-dark: 19, 80, 91;
-    --accent-light: 59, 163, 161;
+    --light: 226, 235, 243;
+    --dark: 47, 60, 76;
+    --accent-dark: 243, 115, 53;
+    --accent-light: 253, 200, 48;
 
-    --dark-mode: 12, 8, 11;
-    --preserve-light: 249, 245, 255;
-    --preserve-dark: 30, 21, 42;
+    --preserve-light: 226, 235, 243;
+    --preserve-dark: 47, 60, 76;
 }
 
 body

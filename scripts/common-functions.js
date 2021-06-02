@@ -55,10 +55,12 @@ function loadTheme(theme)
     const html = document.querySelector("html");
     const style = getComputedStyle(html);
 
-    const dark = style.getPropertyValue("--dark-mode");
+    const dark = style.getPropertyValue("--dark");
     const light = style.getPropertyValue("--light");
     const preserveDark = style.getPropertyValue("--preserve-dark");
     const preserveLight = style.getPropertyValue("--preserve-light");
+
+    const $toggle = $("#theme-toggle");
 
     localStorage.setItem("theme", theme);
     switch (theme)
@@ -66,12 +68,12 @@ function loadTheme(theme)
         case "dark":
             html.style.setProperty("--dark", light);
             html.style.setProperty("--light", dark);
-            $("#theme-toggle").load("/assets/icons/sun.svg");
+            $toggle.load("/assets/icons/sun.svg");
             break;
         case "light":
             html.style.setProperty("--dark", preserveDark);
             html.style.setProperty("--light", preserveLight);
-            $("#theme-toggle").load("/assets/icons/moon.svg");
+            $toggle.load("/assets/icons/moon.svg");
     }
 
     setTimeout(function ()
