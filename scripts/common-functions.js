@@ -2,6 +2,7 @@
 $("#header-pre").load("/sections/header.html", function ()
 {
     $("#dropdown").load("/assets/icons/chevron.svg");
+    $("#old-chevron").load("/assets/icons/chevron.svg");
 
     launchLoad();
 });
@@ -80,12 +81,12 @@ function loadTheme(theme)
         case "dark":
             html.style.setProperty("--dark", light);
             html.style.setProperty("--light", dark);
-            $toggle.load("/assets/icons/sun.svg");
+            $toggle.load("/assets/icons/moon.svg");
             break;
         case "light":
             html.style.setProperty("--dark", preserveDark);
             html.style.setProperty("--light", preserveLight);
-            $toggle.load("/assets/icons/moon.svg");
+            $toggle.load("/assets/icons/sun.svg");
     }
 
     setTimeout(function ()
