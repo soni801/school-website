@@ -1,6 +1,8 @@
 // Load sections into document
 $("#header-pre").load("/sections/header.html", function ()
 {
+    $("#dropdown").load("/assets/icons/chevron.svg");
+
     launchLoad();
 });
 $("#footer-pre").load("/sections/footer.html", function ()
