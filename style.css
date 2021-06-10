@@ -158,8 +158,8 @@ img, br
 #theme-toggle
 {
     display: flex;
-    width: 3rem;
-    height: 3rem;
+    width: 2em !important;
+    height: 2em;
     cursor: pointer;
     fill: rgb(var(--dark));
     transition: 200ms ease;
@@ -191,15 +191,23 @@ img, br
     position: absolute;
     top: calc(100px - 3em);
     right: 0;
+    width: 17ch;
     flex-direction: column;
-    gap: 0;
+    gap: 1rem;
     align-items: start;
     box-shadow: rgba(var(--preserve-dark), .2) 0 0 2rem;
-    padding: 0 1em;
+    padding: 2rem;
     border-radius: 1em;
     background: rgb(var(--light));
     opacity: 0;
     transition: 200ms ease;
+}
+
+#header #dropdown-content *
+{
+    margin: 0;
+    gap: unset;
+    width: 100%;
 }
 
 #header :focus-visible
