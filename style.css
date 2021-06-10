@@ -6,6 +6,8 @@
         1.4 Selection
     2 Recurring selectors
         2.1 Header
+            2.1.1 Header styling
+            2.1.2 Dropdown styling
         2.2 Footer
     3 Section selectors
         3.1 Welcome card
@@ -93,6 +95,7 @@ img, br
 
 /* 2 RECURRING SELECTORS */
 /* 2.1 Header */
+/* 2.1.1 Header styling */
 #header
 {
     display: flex;
@@ -155,23 +158,33 @@ img, br
     transform-origin: left;
 }
 
-#theme-toggle, #old-chevron
+
+
+#header :focus-visible
 {
-    width: 2em !important;
+    outline: none;
+    position: relative;
+}
+
+#header :focus-visible::before
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
     height: 2em;
-    cursor: pointer;
-    fill: rgb(var(--dark));
-    stroke: rgb(var(--dark));
-    transition: 200ms ease;
+    transform: translate(-5px, -50%);
+    padding: 1em;
+    margin-left: -1em;
+    border: 5px solid rgb(var(--accent-dark));
+    border-radius: 4em;
+    box-shadow: rgba(var(--preserve-dark), .2) 0 0 .4rem,
+                rgba(var(--preserve-dark), .2) 0 0 .4rem inset;
 }
 
-#theme-toggle:hover
-{
-    transform: scale(1.2);
-    fill: rgba(var(--dark), .8);
-}
-
-#dropdown
+/* 2.1.2 Dropdown styling */
+#dropdown-button
 {
     display: flex;
     width: 3rem;
@@ -181,11 +194,12 @@ img, br
     transition: 200ms ease;
 }
 
-#dropdown:hover
+#dropdown-button:hover, #theme-toggle:hover
 {
     transform: scale(1.2);
 }
 
+/* Dropdown content. '#header' needed for specificity. */
 #header #dropdown-content
 {
     position: absolute;
@@ -212,32 +226,18 @@ img, br
     align-items: center;
 }
 
+#theme-toggle, #old-chevron
+{
+    width: 2em !important;
+    cursor: pointer;
+    fill: rgb(var(--dark));
+    stroke: rgb(var(--dark));
+    transition: 200ms ease;
+}
+
 #old-chevron
 {
     transform: rotate(-90deg);
-}
-
-#header :focus-visible
-{
-    outline: none;
-    position: relative;
-}
-
-#header :focus-visible::before
-{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2em;
-    transform: translate(-5px, -50%);
-    padding: 1em;
-    margin-left: -1em;
-    border: 5px solid rgb(var(--accent-dark));
-    border-radius: 4em;
-    box-shadow: rgba(var(--preserve-dark), .2) 0 0 .4rem,
-                rgba(var(--preserve-dark), .2) 0 0 .4rem inset;
 }
 
 /* 2.2 Footer */
