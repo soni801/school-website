@@ -177,6 +177,13 @@ img, br
     height: 3rem;
     cursor: pointer;
     stroke: rgb(var(--dark));
+    transition: 200ms ease;
+}
+
+#dropdown:hover
+{
+    transform: scale(1.2);
+    stroke: rgba(var(--dark), .8);
 }
 
 #header :focus-visible
