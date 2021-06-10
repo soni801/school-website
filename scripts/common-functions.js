@@ -38,6 +38,16 @@ function scroll()
 
 window.onscroll = scroll;
 
+// Toggle dropdown
+function toggleDropdown()
+{
+    switch (getComputedStyle(document.querySelector("#dropdown-content")).opacity)
+    {
+        case "0": document.querySelector("#dropdown-content").style.opacity = "1"; break;
+        case "1": document.querySelector("#dropdown-content").style.opacity = "0"; break;
+    }
+}
+
 // Toggle website theme
 function toggleTheme()
 {

@@ -116,6 +116,7 @@ img, br
 
 #header div
 {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 6rem;
@@ -183,7 +184,22 @@ img, br
 #dropdown:hover
 {
     transform: scale(1.2);
-    stroke: rgba(var(--dark), .8);
+}
+
+#header #dropdown-content
+{
+    position: absolute;
+    top: calc(100px - 3em);
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    align-items: start;
+    box-shadow: rgba(var(--preserve-dark), .2) 0 0 2rem;
+    padding: 0 1em;
+    border-radius: 1em;
+    background: rgb(var(--light));
+    opacity: 0;
+    transition: 200ms ease;
 }
 
 #header :focus-visible
