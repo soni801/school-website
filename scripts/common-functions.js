@@ -13,6 +13,7 @@ $("#footer-pre").load("/sections/footer.html", function ()
     $("#twitter-logo-pre").load("/assets/icons/brands/twitter.svg");
     $("#youtube-logo-pre").load("/assets/icons/brands/youtube.svg");
 });
+$("#cursor").load("/assets/icons/cursor.svg");
 
 // Load theme on page launch
 function launchLoad()
@@ -28,6 +29,12 @@ function launchLoad()
 }
 
 launchLoad();
+
+// Mouse move callback
+$(document).mousemove(function(event)
+{
+    $("#cursor").css({position: "absolute", top: event.pageY - 100, left: event.pageX, width: "50px", zIndex: 4, pointerEvents: "none"});
+});
 
 // Scroll callback
 function scroll()
