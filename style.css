@@ -158,8 +158,6 @@ img, br
     transform-origin: left;
 }
 
-
-
 #header :focus-visible
 {
     outline: none;
