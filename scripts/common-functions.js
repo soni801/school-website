@@ -33,7 +33,7 @@ launchLoad();
 // Mouse move callback
 $(document).mousemove(function(event)
 {
-    $("#cursor").css({position: "absolute", top: event.pageY - 100, left: event.pageX, width: "50px", zIndex: 4, pointerEvents: "none"});
+    $("#cursor").css({position: "fixed", top: event.clientY, left: event.clientX, width: "50px", zIndex: 4, pointerEvents: "none"});
 });
 
 // Scroll callback
